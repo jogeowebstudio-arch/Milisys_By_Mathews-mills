@@ -1,0 +1,5609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0">
+
+<meta name="theme-color" content="#151612">
+
+<title>
+    Contact Us | Milisys by Mathew's Mills
+</title>
+
+<meta name="description"
+      content="Contact Milisys by Mathew's Mills — the production unit of Mathew's Mills.">
+
+<!-- =====================================================
+     GOOGLE FONTS
+===================================================== -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+
+
+<!-- =====================================================
+     FONT AWESOME
+===================================================== -->
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root{
+
+    --bg:#f5f2ea;
+    --paper:#fffdf8;
+    --white:#ffffff;
+
+    --dark:#151612;
+    --dark-2:#0c0e0b;
+    --dark-3:#20231d;
+
+    --gold:#b78a45;
+    --gold-light:#e0c18a;
+    --gold-bright:#f4d28e;
+
+    --green:#3f7548;
+    --green-light:#72a878;
+
+    --text:#191713;
+    --muted:#706b61;
+
+    --line:rgba(25,23,19,.10);
+
+    --shadow:
+        0 30px 80px rgba(30,24,12,.15);
+
+    --container:1240px;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    margin:0;
+
+    font-family:"DM Sans",sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+
+body::selection{
+
+    background:var(--gold);
+
+    color:white;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+
+button{
+
+    border:0;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+}
+
+
+.container{
+
+    width:min(
+        calc(100% - 48px),
+        var(--container)
+    );
+
+    margin:auto;
+
+}
+
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:99999;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#11130f;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+
+}
+
+
+.loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+
+.loader-inner{
+
+    text-align:center;
+
+}
+
+
+.loader-logo{
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:auto;
+
+    border:1px solid var(--gold);
+
+    color:var(--gold-light);
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    box-shadow:
+        0 0 30px rgba(183,138,69,.18);
+
+    animation:
+        loaderPulse 1.5s ease-in-out infinite;
+
+}
+
+
+.loader-inner p{
+
+    margin-top:18px;
+
+    color:#aaa69d;
+
+    font-size:9px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+}
+
+
+@keyframes loaderPulse{
+
+    50%{
+
+        transform:scale(1.08);
+
+        box-shadow:
+            0 0 50px
+            rgba(183,138,69,.35);
+
+    }
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 18px 0;
+
+    background:
+        rgba(247,244,237,.90);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(25,23,19,.06);
+
+    transition:
+        padding .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.navbar.scrolled {
+    padding: 11px 0;
+
+    background:
+        rgba(255,253,248,.97);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.07);
+}
+
+.nav-inner {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-shrink:0;
+    text-decoration:none;
+}
+
+
+/* =========================================================
+   LOGO IMAGE CIRCLE
+========================================================= */
+
+.logo-mark{
+    width:55px;
+    height:55px;
+
+    border:1px solid var(--gold);
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+    flex-shrink:0;
+
+    background:#fffdf8;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.08);
+}
+
+
+/* LOGO IMAGE */
+
+.logo-mark img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+    display:block;
+
+    padding:4px;
+}
+
+
+/* =========================================================
+   MILISYS NAME
+========================================================= */
+
+.logo-text .milisys-name{
+    display:block;
+
+    font-family:
+        "Bookman Old Style",
+        Bookman,
+        Georgia,
+        serif;
+
+    font-size:20px;
+    font-weight:700;
+
+    line-height:1;
+
+    color:#4d7048 !important;
+
+    letter-spacing:.2px;
+}
+
+
+/* =========================================================
+   COMPANY SUBTITLE
+========================================================= */
+
+.logo-text .company-subtitle{
+    display:block;
+
+    margin-top:5px;
+
+    font-family:
+        "Bookman Old Style",
+        Bookman,
+        Georgia,
+        serif;
+
+    font-size:8px;
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    line-height:1.2;
+
+    text-transform:uppercase;
+
+    color:#4a463e !important;
+}
+
+
+/* =========================================================
+   JO-GEO VENTURES
+========================================================= */
+
+.logo-text .company-subtitle .geo-ventures{
+    color:#e67e22 !important;
+
+    font-family:
+        "Bookman Old Style",
+        Bookman,
+        Georgia,
+        serif;
+
+    font-weight:700;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.nav-links > a {
+    position: relative;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.nav-links > a:not(.nav-order)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: width .3s ease;
+}
+
+.nav-links > a:not(.nav-order):hover::after {
+    width: 100%;
+}
+
+.nav-links .active {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   ORDER BUTTON
+========================================================= */
+
+.nav-order {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 43px;
+
+    padding:
+        11px 22px;
+
+    border-radius: 50px;
+
+    background: var(--dark);
+
+    color: white;
+
+    transition:
+        .3s ease;
+}
+
+.nav-order:hover {
+    background: var(--gold);
+
+    transform:
+        translateY(-2px);
+}
+
+
+
+.menu{
+
+    display:none;
+
+    width:44px;
+
+    height:44px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--dark);
+
+    color:white;
+
+    font-size:17px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.contact-hero{
+
+    position:relative;
+
+    min-height:100svh;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:
+        150px 0
+        90px;
+
+    color:white;
+
+    background:
+
+        radial-gradient(
+            circle at 78% 30%,
+            rgba(183,138,69,.20),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 12% 80%,
+            rgba(63,117,72,.18),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #181a15,
+            #0b0d0a
+        );
+
+}
+
+
+/* =====================================================
+   HERO GRID
+===================================================== */
+
+.hero-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.11;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.16) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.16) 1px,
+            transparent 1px
+        );
+
+    background-size:75px 75px;
+
+    mask-image:
+        linear-gradient(
+            90deg,
+            black,
+            transparent 85%
+        );
+
+}
+
+
+/* =====================================================
+   HERO ORBS
+===================================================== */
+
+.hero-orb{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    filter:blur(5px);
+
+}
+
+
+.hero-orb.one{
+
+    width:560px;
+
+    height:560px;
+
+    right:-230px;
+
+    top:-170px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(183,138,69,.18),
+            transparent 70%
+        );
+
+    animation:
+        orbFloat 11s ease-in-out infinite;
+
+}
+
+
+.hero-orb.two{
+
+    width:430px;
+
+    height:430px;
+
+    left:-210px;
+
+    bottom:-170px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(63,117,72,.18),
+            transparent 70%
+        );
+
+    animation:
+        orbFloat 14s ease-in-out infinite reverse;
+
+}
+
+
+@keyframes orbFloat{
+
+    0%,100%{
+
+        transform:
+            translate3d(0,0,0)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translate3d(40px,-30px,0)
+            scale(1.08);
+
+    }
+
+}
+
+
+/* =====================================================
+   HERO GRID CONTENT
+===================================================== */
+
+.hero-inner{
+
+    position:relative;
+
+    z-index:3;
+
+    width:100%;
+    max-width:1240px;
+    margin:0 auto;
+    padding-left:35px;
+    padding-right:35px;
+
+    display:grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+.hero-kicker{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:22px;
+
+    color:var(--gold-light);
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+
+.hero-kicker::before{
+
+    content:"";
+
+    width:38px;
+
+    height:1px;
+
+    background:var(--gold);
+
+}
+
+
+.hero-title{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(58px,7.5vw,100px);
+
+    line-height:.9;
+
+    letter-spacing:-5px;
+
+}
+
+
+.hero-title em{
+
+    color:var(--gold-light);
+
+    font-style:italic;
+
+}
+
+
+.hero-text{
+
+    max-width:560px;
+
+    margin-top:30px;
+
+    color:#aaa89f;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+}
+
+
+.hero-mini{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:30px;
+
+}
+
+
+.hero-mini span{
+
+    padding:9px 14px;
+
+    border-radius:100px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    background:
+        rgba(255,255,255,.04);
+
+    color:#c9c6be;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+/* =====================================================
+   3D HERO STAGE
+===================================================== */
+
+.hero-stage{
+
+    position:relative;
+
+    min-height:570px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    perspective:1600px;
+
+}
+
+
+.production-3d{
+
+    position:relative;
+
+    width:min(510px,92%);
+
+    aspect-ratio:1;
+
+    transform-style:preserve-3d;
+
+    animation:
+        productionFloat 7s ease-in-out infinite;
+
+}
+
+
+@keyframes productionFloat{
+
+    0%,100%{
+
+        transform:
+            translateY(0)
+            rotateX(1deg)
+            rotateY(-4deg);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-18px)
+            rotateX(-2deg)
+            rotateY(5deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   ORBIT RINGS
+===================================================== */
+
+.orbit{
+
+    position:absolute;
+
+    inset:5%;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(183,138,69,.35);
+
+    transform:
+        rotateX(68deg)
+        rotateZ(-18deg);
+
+}
+
+
+.orbit.two{
+
+    inset:14%;
+
+    border-style:dashed;
+
+    border-color:
+        rgba(255,255,255,.16);
+
+    transform:
+        rotateX(65deg)
+        rotateZ(30deg);
+
+    animation:
+        orbitRotate 17s linear infinite;
+
+}
+
+
+.orbit.three{
+
+    inset:23%;
+
+    border-color:
+        rgba(63,117,72,.30);
+
+    transform:
+        rotateY(68deg)
+        rotateZ(10deg);
+
+    animation:
+        orbitReverse 12s linear infinite;
+
+}
+
+
+@keyframes orbitRotate{
+
+    to{
+
+        transform:
+            rotateX(65deg)
+            rotateZ(390deg);
+
+    }
+
+}
+
+
+@keyframes orbitReverse{
+
+    to{
+
+        transform:
+            rotateY(68deg)
+            rotateZ(-350deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   HERO PRODUCTION CARD
+===================================================== */
+
+.production-card{
+
+    position:absolute;
+
+    left:17%;
+
+    top:16%;
+
+    width:66%;
+
+    height:68%;
+
+    overflow:hidden;
+
+    border-radius:34px;
+
+    transform-style:preserve-3d;
+
+    transform:
+        translateZ(65px)
+        rotateY(-10deg)
+        rotateX(5deg);
+
+    background:#11130f;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+        30px 45px 80px
+        rgba(0,0,0,.55);
+
+}
+
+
+/* =====================================================
+   HERO 7 COLOUR LED
+===================================================== */
+
+.production-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-5px;
+
+    z-index:-2;
+
+    border-radius:40px;
+
+    background:
+        conic-gradient(
+
+            from 0deg,
+
+            #ff2d55,
+            #ff7a00,
+            #ffe600,
+            #32d74b,
+            #00d9ff,
+            #367cff,
+            #b95cff,
+            #ff2d55
+
+        );
+
+    filter:blur(5px);
+
+    animation:
+        heroLedRotate 4s linear infinite;
+
+}
+
+
+.production-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-11px;
+
+    z-index:-3;
+
+    border-radius:46px;
+
+    background:
+        conic-gradient(
+
+            from 0deg,
+
+            #ff2d55,
+            #ff7a00,
+            #ffe600,
+            #32d74b,
+            #00d9ff,
+            #367cff,
+            #b95cff,
+            #ff2d55
+
+        );
+
+    filter:blur(15px);
+
+    opacity:.38;
+
+    animation:
+        heroLedRotate 4s linear infinite reverse;
+
+}
+
+
+@keyframes heroLedRotate{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.production-image{
+
+    position:absolute;
+
+    inset:9px;
+
+    border-radius:27px;
+
+    overflow:hidden;
+
+    background:#20231d;
+
+}
+
+
+.production-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.58;
+
+    transform:scale(1.08);
+
+    transition:
+        transform 1s ease,
+        opacity .6s ease;
+
+}
+
+
+.production-card:hover
+.production-image img{
+
+    transform:scale(1.15);
+
+    opacity:.78;
+
+}
+
+
+.production-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            to top,
+            rgba(8,9,7,.96),
+            rgba(8,9,7,.10) 70%
+        );
+
+}
+
+
+/* =====================================================
+   HERO CARD CONTENT
+===================================================== */
+
+.production-content{
+
+    position:absolute;
+
+    left:30px;
+
+    right:30px;
+
+    bottom:28px;
+
+    z-index:5;
+
+    transform:
+        translateZ(45px);
+
+}
+
+
+.production-label{
+
+    color:var(--gold-light);
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+.production-content h3{
+
+    margin-top:9px;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+}
+
+
+.production-content p{
+
+    margin-top:7px;
+
+    color:#aaa79e;
+
+    font-size:10px;
+
+    line-height:1.6;
+
+}
+
+
+/* =====================================================
+   FLOATING PILLS
+===================================================== */
+
+.data-pill{
+
+    position:absolute;
+
+    z-index:10;
+
+    padding:12px 16px;
+
+    border-radius:100px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    background:
+        rgba(255,255,255,.06);
+
+    backdrop-filter:blur(16px);
+
+    color:#d8d5cc;
+
+    font-size:9px;
+
+    letter-spacing:1.4px;
+
+    text-transform:uppercase;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.2);
+
+    animation:
+        pillFloat 4s ease-in-out infinite;
+
+}
+
+
+.data-pill i{
+
+    color:var(--gold-light);
+
+    margin-right:7px;
+
+}
+
+
+.pill-one{
+
+    right:-2%;
+
+    top:18%;
+
+}
+
+
+.pill-two{
+
+    left:-4%;
+
+    bottom:19%;
+
+    animation-delay:1s;
+
+}
+
+
+.pill-three{
+
+    left:12%;
+
+    top:6%;
+
+    animation-delay:2s;
+
+}
+
+
+@keyframes pillFloat{
+
+    50%{
+
+        transform:
+            translateY(-10px);
+
+    }
+
+}
+
+
+/* =====================================================
+   SCROLL INDICATOR
+===================================================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:28px;
+
+    left:50%;
+
+    z-index:10;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:9px;
+
+    color:#77766f;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+
+.scroll-line{
+
+    width:1px;
+
+    height:45px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--gold),
+            transparent
+        );
+
+    animation:
+        scrollDown 1.8s ease-in-out infinite;
+
+}
+
+
+@keyframes scrollDown{
+
+    50%{
+
+        transform:translateY(12px);
+
+        opacity:.3;
+
+    }
+
+}
+
+
+/* =====================================================
+   COMMON SECTIONS
+===================================================== */
+
+.section{
+
+    padding:120px 0;
+
+}
+
+
+.section-heading{
+
+    max-width:720px;
+
+    margin-bottom:55px;
+
+}
+
+
+.kicker{
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+}
+
+
+.section-title{
+
+    margin-top:13px;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:
+        clamp(42px,5vw,68px);
+
+    line-height:.98;
+
+    letter-spacing:-2.5px;
+
+}
+
+
+.section-title em{
+
+    color:var(--green);
+
+    font-style:italic;
+
+}
+
+
+.section-description{
+
+    margin-top:20px;
+
+    color:var(--muted);
+
+    max-width:620px;
+
+    line-height:1.85;
+
+}
+
+
+/* =====================================================
+   CONTACT DETAILS
+===================================================== */
+
+.contact-details{
+
+    background:var(--paper);
+
+}
+
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:22px;
+
+    perspective:1400px;
+
+}
+
+
+/* =====================================================
+   CONTACT CARD
+===================================================== */
+
+.info-card{
+
+    --card-image:
+        url("img/contact/default.jpg");
+
+    position:relative;
+
+    min-height:290px;
+
+    padding:32px;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+    border-radius:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    color:white;
+
+    background:#151612;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    transform-style:preserve-3d;
+
+    transition:
+        transform .55s cubic-bezier(.2,.8,.2,1),
+        box-shadow .55s ease;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.12);
+
+}
+
+
+/* =====================================================
+   EMAIL CARD WIDE
+===================================================== */
+
+.email-card{
+
+    grid-column:span 2;
+
+}
+
+
+/* =====================================================
+   BACKGROUND IMAGE
+===================================================== */
+
+.info-card .card-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-4;
+
+    background-image:
+        var(--card-image);
+
+    background-size:cover;
+
+    background-position:center;
+
+    transform:scale(1.05);
+
+    transition:
+        transform 1s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+/* =====================================================
+   IMAGE DARK OVERLAY
+===================================================== */
+
+.info-card .card-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-3;
+
+    background:
+
+        linear-gradient(
+            to top,
+            rgba(8,9,7,.97) 0%,
+            rgba(8,9,7,.78) 42%,
+            rgba(8,9,7,.30) 100%
+        );
+
+    transition:.6s;
+
+}
+
+
+/* =====================================================
+   HOVER IMAGE
+===================================================== */
+
+.info-card:hover .card-bg{
+
+    transform:scale(1.14);
+
+}
+
+
+.info-card:hover .card-overlay{
+
+    background:
+
+        linear-gradient(
+            to top,
+            rgba(8,9,7,.94) 0%,
+            rgba(8,9,7,.58) 45%,
+            rgba(8,9,7,.18) 100%
+        );
+
+}
+
+
+/* =====================================================
+   7 COLOUR LED BORDER
+===================================================== */
+
+.info-card .led-border{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:8;
+
+    pointer-events:none;
+
+    padding:2px;
+
+    border-radius:28px;
+
+    background:
+
+        conic-gradient(
+
+            from 0deg,
+
+            #ff2d55 0deg,
+            #ff7a00 51deg,
+            #ffe600 102deg,
+            #32d74b 154deg,
+            #00d9ff 205deg,
+            #367cff 257deg,
+            #b95cff 308deg,
+            #ff2d55 360deg
+
+        );
+
+    background-size:100% 100%;
+
+    animation:
+        ledSevenColors 5s linear infinite;
+
+    opacity:.95;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+}
+
+
+@keyframes ledSevenColors{
+
+    0%{
+
+        transform:rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   OUTER LED GLOW
+===================================================== */
+
+.info-card .led-glow{
+
+    position:absolute;
+
+    inset:-6px;
+
+    z-index:-1;
+
+    border-radius:34px;
+
+    background:
+
+        conic-gradient(
+
+            #ff2d55,
+            #ff7a00,
+            #ffe600,
+            #32d74b,
+            #00d9ff,
+            #367cff,
+            #b95cff,
+            #ff2d55
+
+        );
+
+    filter:blur(10px);
+
+    opacity:.34;
+
+    animation:
+        ledGlowRotate 5s linear infinite;
+
+}
+
+
+@keyframes ledGlowRotate{
+
+    to{
+
+        transform:rotate(-360deg);
+
+    }
+
+}
+
+
+.info-card:hover .led-glow{
+
+    opacity:.65;
+
+    filter:blur(13px);
+
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.card-content{
+
+    position:relative;
+
+    z-index:10;
+
+    transform-style:preserve-3d;
+
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.info-icon{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:19px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        rgba(10,11,9,.90);
+
+    color:var(--gold-light);
+
+    font-size:21px;
+
+    border:
+        1px solid
+        rgba(224,193,138,.35);
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(0,0,0,.30),
+
+        inset 0 0 20px
+        rgba(183,138,69,.08);
+
+    transform:
+        translateZ(40px);
+
+    transition:.4s;
+
+}
+
+
+.info-card:hover .info-icon{
+
+    transform:
+        translateZ(60px)
+        translateY(-5px)
+        rotateZ(-5deg);
+
+    background:
+        rgba(183,138,69,.18);
+
+    box-shadow:
+        0 0 30px
+        rgba(183,138,69,.25);
+
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.info-card h3{
+
+    margin-top:22px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:28px;
+
+    color:white;
+
+    text-shadow:
+        0 3px 15px
+        rgba(0,0,0,.45);
+
+    transform:
+        translateZ(35px);
+
+}
+
+
+/* =====================================================
+   CARD DESCRIPTION
+===================================================== */
+
+.info-card p{
+
+    margin-top:7px;
+
+    max-width:450px;
+
+    color:
+        rgba(255,255,255,.80);
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    transform:
+        translateZ(28px);
+
+}
+
+
+/* =====================================================
+   CARD LINK
+===================================================== */
+
+.info-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    width:max-content;
+
+    max-width:100%;
+
+    margin-top:17px;
+
+    padding:9px 13px;
+
+    border-radius:100px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    backdrop-filter:blur(12px);
+
+    color:var(--gold-light);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    word-break:break-word;
+
+    transition:.35s;
+
+    transform:
+        translateZ(35px);
+
+}
+
+
+.info-link:hover{
+
+    background:var(--gold);
+
+    color:white;
+
+    border-color:var(--gold);
+
+    transform:
+        translateZ(48px)
+        translateX(4px);
+
+}
+
+
+.info-link i{
+
+    transition:.35s;
+
+}
+
+
+.info-link:hover i{
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* =====================================================
+   EMAIL LIST
+===================================================== */
+
+.email-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-top:15px;
+
+}
+
+
+.email-list a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:9px 12px;
+
+    border-radius:100px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    color:var(--gold-light);
+
+    font-size:9px;
+
+    font-weight:600;
+
+    word-break:break-all;
+
+    transition:.3s;
+
+}
+
+
+.email-list a:hover{
+
+    background:var(--gold);
+
+    color:white;
+
+}
+
+
+/* =====================================================
+   SOCIAL SECTION
+===================================================== */
+
+.social-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(183,138,69,.13),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            135deg,
+            #eee7d9,
+            #faf8f1
+        );
+
+}
+
+
+.social-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap:15px;
+
+}
+
+
+/* =====================================================
+   SOCIAL CARD
+===================================================== */
+
+.social-card{
+
+    --social-image:
+        url("img/contact/social.jpg");
+
+    position:relative;
+
+    min-height:205px;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background:#151612;
+
+    color:white;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    transform-style:preserve-3d;
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+
+}
+
+
+.social-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+        var(--social-image);
+
+    background-size:cover;
+
+    background-position:center;
+
+    opacity:.38;
+
+    transform:scale(1.05);
+
+    transition:.8s;
+
+}
+
+
+.social-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(10,11,9,.25),
+            rgba(10,11,9,.90)
+        );
+
+}
+
+
+.social-card:hover{
+
+    transform:
+        translateY(-10px)
+        rotateX(3deg)
+        rotateY(-3deg)
+        scale(1.015);
+
+    box-shadow:
+        0 30px 60px
+        rgba(30,24,12,.22);
+
+}
+
+
+.social-card:hover::before{
+
+    transform:scale(1.15);
+
+    opacity:.55;
+
+}
+
+
+/* =====================================================
+   SOCIAL LED
+===================================================== */
+
+.social-card .social-led{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:5;
+
+    pointer-events:none;
+
+    border-radius:25px;
+
+    padding:2px;
+
+    background:
+
+        conic-gradient(
+
+            #ff2d55,
+            #ff7a00,
+            #ffe600,
+            #32d74b,
+            #00d9ff,
+            #367cff,
+            #b95cff,
+            #ff2d55
+
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    animation:
+        socialLed 4s linear infinite;
+
+}
+
+
+@keyframes socialLed{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+.social-inner{
+
+    position:relative;
+
+    z-index:10;
+
+    transform:
+        translateZ(35px);
+
+}
+
+
+.social-icon{
+
+    width:62px;
+
+    height:62px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        rgba(15,15,13,.92);
+
+    color:var(--gold-light);
+
+    font-size:23px;
+
+    border:
+        1px solid
+        rgba(224,193,138,.35);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.30);
+
+    transition:.4s;
+
+}
+
+
+.social-card:hover .social-icon{
+
+    transform:
+        rotateY(180deg)
+        scale(1.08);
+
+    background:var(--gold);
+
+    color:white;
+
+}
+
+
+.social-card h3{
+
+    margin-top:17px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:20px;
+
+}
+
+
+.social-card span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:#c8c4ba;
+
+    font-size:8px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =====================================================
+   LOCATION
+===================================================== */
+
+.location-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(183,138,69,.14),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #151612,
+            #0d0f0c
+        );
+
+    color:white;
+
+}
+
+
+.location-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        .85fr 1.15fr;
+
+    gap:55px;
+
+    align-items:stretch;
+
+}
+
+
+.location-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+
+.location-content .kicker{
+
+    color:var(--gold-light);
+
+}
+
+
+.location-title{
+
+    margin-top:14px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(45px,5vw,70px);
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+}
+
+
+.location-title em{
+
+    color:var(--gold-light);
+
+    font-style:italic;
+
+}
+
+
+.location-description{
+
+    margin-top:22px;
+
+    max-width:490px;
+
+    color:#aaa79f;
+
+    line-height:1.85;
+
+    font-size:14px;
+
+}
+
+
+/* =====================================================
+   ADDRESS BOX
+===================================================== */
+
+.address-box{
+
+    position:relative;
+
+    margin-top:30px;
+
+    padding:26px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+}
+
+
+.address-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-1px;
+
+    border-radius:25px;
+
+    background:
+
+        conic-gradient(
+
+            #ff2d55,
+            #ff7a00,
+            #ffe600,
+            #32d74b,
+            #00d9ff,
+            #367cff,
+            #b95cff,
+            #ff2d55
+
+        );
+
+    filter:blur(5px);
+
+    opacity:.35;
+
+    z-index:-1;
+
+    animation:
+        addressLED 5s linear infinite;
+
+}
+
+
+@keyframes addressLED{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+.address-row{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+}
+
+
+.address-icon{
+
+    width:45px;
+
+    height:45px;
+
+    flex:0 0 45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--gold-light);
+
+    border:
+        1px solid
+        rgba(224,193,138,.45);
+
+    background:
+        rgba(183,138,69,.08);
+
+}
+
+
+.address-row strong{
+
+    display:block;
+
+    color:white;
+
+    font-size:13px;
+
+}
+
+
+.address-row span{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#aaa79f;
+
+    font-size:11px;
+
+    line-height:1.8;
+
+}
+
+
+/* =====================================================
+   MAP
+===================================================== */
+
+.map-box{
+
+    position:relative;
+
+    min-height:530px;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+        0 35px 80px
+        rgba(0,0,0,.40);
+
+}
+
+
+.map-box iframe{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:530px;
+
+    border:0;
+
+    filter:
+        grayscale(.8)
+        contrast(1.05)
+        brightness(.68);
+
+    transition:
+        filter .6s;
+
+}
+
+
+.map-box:hover iframe{
+
+    filter:
+        grayscale(.15)
+        contrast(1)
+        brightness(.90);
+
+}
+
+
+/* =====================================================
+   MAP 7 COLOUR LED FRAME
+===================================================== */
+
+.map-led{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:5;
+
+    pointer-events:none;
+
+    border-radius:30px;
+
+    padding:2px;
+
+    background:
+
+        conic-gradient(
+
+            from 0deg,
+
+            #ff2d55,
+            #ff7a00,
+            #ffe600,
+            #32d74b,
+            #00d9ff,
+            #367cff,
+            #b95cff,
+            #ff2d55
+
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    animation:
+        mapLED 5s linear infinite;
+
+}
+
+
+@keyframes mapLED{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   MAP GLOW
+===================================================== */
+
+.map-glow{
+
+    position:absolute;
+
+    inset:-8px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    border-radius:36px;
+
+    background:
+
+        conic-gradient(
+
+            #ff2d55,
+            #ff7a00,
+            #ffe600,
+            #32d74b,
+            #00d9ff,
+            #367cff,
+            #b95cff,
+            #ff2d55
+
+        );
+
+    filter:blur(12px);
+
+    opacity:.30;
+
+    animation:
+        mapGlow 5s linear infinite reverse;
+
+}
+
+
+@keyframes mapGlow{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   MAP LABEL
+===================================================== */
+
+.map-location-label{
+
+    position:absolute;
+
+    z-index:8;
+
+    top:20px;
+
+    left:20px;
+
+    padding:12px 16px;
+
+    border-radius:100px;
+
+    background:
+        rgba(15,15,13,.85);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    font-size:9px;
+
+    letter-spacing:1.2px;
+
+    text-transform:uppercase;
+
+}
+
+
+.map-location-label i{
+
+    color:var(--gold-light);
+
+    margin-right:7px;
+
+}
+
+
+/* =====================================================
+   MAP BUTTON
+===================================================== */
+
+.map-button{
+
+    position:absolute;
+
+    z-index:8;
+
+    left:22px;
+
+    bottom:22px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:14px 19px;
+
+    border-radius:100px;
+
+    background:white;
+
+    color:var(--dark);
+
+    font-size:11px;
+
+    font-weight:700;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.30);
+
+    transition:.35s;
+
+}
+
+
+.map-button:hover{
+
+    background:var(--gold);
+
+    color:white;
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-section{
+
+    padding:110px 0;
+
+    background:var(--paper);
+
+}
+
+
+.cta-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:75px 40px;
+
+    border-radius:34px;
+
+    background:
+
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(183,138,69,.18),
+            transparent 32%
+        ),
+
+        linear-gradient(
+            135deg,
+            #181a15,
+            #0d0f0c
+        );
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+.cta-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-3px;
+
+    border-radius:37px;
+
+    background:
+
+        conic-gradient(
+
+            #ff2d55,
+            #ff7a00,
+            #ffe600,
+            #32d74b,
+            #00d9ff,
+            #367cff,
+            #b95cff,
+            #ff2d55
+
+        );
+
+    filter:blur(7px);
+
+    opacity:.45;
+
+    z-index:0;
+
+    animation:
+        ctaLED 6s linear infinite;
+
+}
+
+
+@keyframes ctaLED{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+.cta-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+.cta-box h2{
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(42px,5vw,68px);
+
+}
+
+
+.cta-box h2 em{
+
+    color:var(--gold-light);
+
+    font-style:italic;
+
+}
+
+
+.cta-box p{
+
+    max-width:650px;
+
+    margin:18px auto 30px;
+
+    color:#aaa79f;
+
+    line-height:1.8;
+
+}
+
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+
+.cta-btn{
+
+    min-height:52px;
+
+    padding:0 25px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    border-radius:100px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+
+.cta-btn:hover{
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.25);
+
+}
+
+
+.whatsapp-btn{
+
+    background:#25d366;
+
+    color:white;
+
+}
+
+
+.call-btn{
+
+    background:white;
+
+    color:var(--dark);
+
+}
+
+
+.email-btn{
+
+    background:var(--gold);
+
+    color:white;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    background:#0d0f0c;
+
+    color:#8e8b83;
+
+    padding:28px 0;
+
+}
+
+
+.footer-inner{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    font-size:10px;
+
+}
+
+
+.footer strong{
+
+    color:white;
+
+}
+
+
+/* =====================================================
+   MOBILE WHATSAPP
+===================================================== */
+
+.mobile-whatsapp{
+
+    display:none;
+
+    position:fixed;
+
+    left:14px;
+
+    right:14px;
+
+    bottom:15px;
+
+    z-index:9000;
+
+    min-height:54px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:9px;
+
+    border-radius:100px;
+
+    background:#25d366;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.30);
+
+}
+
+
+/* =====================================================
+   REVEAL ANIMATIONS
+===================================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:
+        translateY(45px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.reveal-left{
+
+    opacity:0;
+
+    transform:
+        translateX(-55px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s cubic-bezier(.2,.8,.2,1);
+
+}
+
+
+.reveal-left.active{
+
+    opacity:1;
+
+    transform:
+        translateX(0);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:1100px){
+
+    .container{
+
+        width:
+            min(
+                calc(100% - 40px),
+                950px
+            );
+
+    }
+
+
+    .hero-inner{
+
+        gap:40px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .email-card{
+
+        grid-column:span 2;
+
+    }
+
+
+    .social-grid{
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE NAV
+===================================================== */
+
+@media(max-width:900px){
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        padding-left:20px;
+        padding-right:20px;
+        gap:30px;
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:76px;
+
+        left:20px;
+
+        right:20px;
+
+        padding:22px;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        background:
+            rgba(255,253,248,.97);
+
+        backdrop-filter:blur(20px);
+
+        border:
+            1px solid
+            var(--line);
+
+        border-radius:24px;
+
+        box-shadow:
+            var(--shadow);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transform:
+            translateY(-15px);
+
+        transition:.3s;
+
+    }
+
+
+    .nav-links.open{
+
+        opacity:1;
+
+        visibility:visible;
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    .nav-links a{
+
+        padding:14px 5px;
+
+        border-bottom:
+            1px solid
+            var(--line);
+
+    }
+
+
+    .nav-links .nav-order{
+
+        text-align:center;
+
+        margin-top:12px;
+
+        border:0;
+
+    }
+
+
+    .menu{
+
+        display:flex;
+
+    }
+
+
+    .hero-inner{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+
+    .hero-kicker{
+
+        justify-content:center;
+
+    }
+
+
+    .hero-text{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+    .hero-mini{
+
+        justify-content:center;
+
+    }
+
+
+    .hero-stage{
+
+        min-height:500px;
+
+        margin-top:10px;
+
+    }
+
+
+    .location-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:767px){
+
+    .hero-inner{
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .container{
+
+        width:
+            calc(100% - 28px);
+
+    }
+
+
+    .navbar{
+
+        padding:12px 0;
+
+    }
+
+
+    .logo-mark{
+
+        width:40px;
+
+        height:40px;
+
+        flex-basis:40px;
+
+    }
+
+
+    .logo-text strong{
+
+        font-size:17px;
+
+    }
+
+
+    .logo-text span{
+
+        font-size:7px;
+
+    }
+
+
+    .contact-hero{
+
+        min-height:auto;
+
+        padding:
+            125px 0
+            65px;
+
+    }
+
+
+    .hero-title{
+
+        font-size:
+            clamp(47px,14vw,63px);
+
+        letter-spacing:-2.5px;
+
+    }
+
+
+    .hero-text{
+
+        font-size:13px;
+
+        line-height:1.8;
+
+    }
+
+
+    .hero-stage{
+
+        min-height:410px;
+
+    }
+
+
+    .production-3d{
+
+        width:98%;
+
+    }
+
+
+    .production-card{
+
+        left:15%;
+
+        width:70%;
+
+        height:65%;
+
+    }
+
+
+    .production-content{
+
+        left:20px;
+
+        right:20px;
+
+        bottom:20px;
+
+    }
+
+
+    .production-content h3{
+
+        font-size:24px;
+
+    }
+
+
+    .production-content p{
+
+        font-size:8px;
+
+    }
+
+
+    .data-pill{
+
+        padding:8px 11px;
+
+        font-size:7px;
+
+        letter-spacing:1px;
+
+    }
+
+
+    .pill-one{
+
+        right:-1%;
+
+    }
+
+
+    .pill-two{
+
+        left:-1%;
+
+    }
+
+
+    .pill-three{
+
+        display:none;
+
+    }
+
+
+    .section{
+
+        padding:80px 0;
+
+    }
+
+
+    .section-title{
+
+        font-size:43px;
+
+    }
+
+
+    .info-grid{
+
+        grid-template-columns:1fr;
+
+        gap:13px;
+
+    }
+
+
+    .info-card{
+
+        min-height:260px;
+
+        padding:26px;
+
+        border-radius:24px;
+
+    }
+
+
+    .email-card{
+
+        grid-column:span 1;
+
+    }
+
+
+    .info-card .led-border{
+
+        border-radius:24px;
+
+    }
+
+
+    .info-card .led-glow{
+
+        border-radius:30px;
+
+    }
+
+
+    .email-list{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+
+    .email-list a{
+
+        max-width:100%;
+
+    }
+
+
+    .social-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+
+    .social-card{
+
+        min-height:160px;
+
+        border-radius:21px;
+
+    }
+
+
+    .social-icon{
+
+        width:51px;
+
+        height:51px;
+
+        font-size:19px;
+
+    }
+
+
+    .social-card h3{
+
+        font-size:17px;
+
+    }
+
+
+    .location-title{
+
+        font-size:45px;
+
+    }
+
+
+    .map-box{
+
+        min-height:390px;
+
+        border-radius:23px;
+
+    }
+
+
+    .map-box iframe{
+
+        min-height:390px;
+
+    }
+
+
+    .map-led{
+
+        border-radius:23px;
+
+    }
+
+
+    .map-location-label{
+
+        top:15px;
+
+        left:15px;
+
+        font-size:7px;
+
+        padding:10px 12px;
+
+    }
+
+
+    .map-button{
+
+        left:15px;
+
+        bottom:15px;
+
+        padding:12px 15px;
+
+    }
+
+
+    .cta-section{
+
+        padding:80px 0;
+
+    }
+
+
+    .cta-box{
+
+        padding:
+            55px 20px;
+
+        border-radius:26px;
+
+    }
+
+
+    .cta-box h2{
+
+        font-size:42px;
+
+    }
+
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+    .cta-btn{
+
+        width:100%;
+
+    }
+
+
+    .footer{
+
+        padding-bottom:90px;
+
+    }
+
+
+    .footer-inner{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .mobile-whatsapp{
+
+        display:flex;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:480px){
+
+    .hero-stage{
+
+        min-height:350px;
+
+    }
+
+
+    .production-card{
+
+        left:13%;
+
+        width:74%;
+
+        height:62%;
+
+    }
+
+
+    .production-content h3{
+
+        font-size:21px;
+
+    }
+
+
+    .production-content p{
+
+        font-size:8px;
+
+    }
+
+
+    .social-card{
+
+        min-height:145px;
+
+    }
+
+
+    .social-card h3{
+
+        font-size:15px;
+
+    }
+
+
+    .info-card{
+
+        min-height:245px;
+
+    }
+
+
+    .info-card h3{
+
+        font-size:25px;
+
+    }
+
+
+    .address-box{
+
+        padding:20px;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media(max-width:360px){
+
+    .container{
+
+        width:
+            calc(100% - 22px);
+
+    }
+
+
+    .hero-title{
+
+        font-size:40px;
+
+    }
+
+
+    .hero-stage{
+
+        min-height:320px;
+
+    }
+
+
+    .production-card{
+
+        width:77%;
+
+        left:11.5%;
+
+    }
+
+
+    .social-card{
+
+        min-height:135px;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+
+        scroll-behavior:auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.001ms!important;
+
+        animation-iteration-count:1!important;
+
+        transition-duration:.001ms!important;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<header class="navbar" id="navbar">
+
+    <div class="container nav-inner">
+
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <a href="index.html" class="logo">
+
+            <!-- LOGO IMAGE -->
+            <div class="logo-mark">
+                <img
+                    src="img/milisys logo breakdown-09.png"
+                    alt="Milisys Logo"
+                >
+            </div>
+
+            <!-- LOGO TEXT -->
+            <div class="logo-text">
+
+                <strong class="milisys-name">
+                    Milisys
+                </strong>
+
+                <span class="company-subtitle">
+                    By Mathew's Mills |
+                    <span class="geo-ventures">
+                        JO-GEO VENTURES
+                    </span>
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="order now.html">
+                Order Now
+            </a>
+
+            <a href="our story.html" class="active">
+                Our Story
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="contact.html" class="nav-order">
+                Contact Now
+            </a>
+
+        </nav>
+
+
+        <!-- =================================================
+             MOBILE MENU
+        ================================================== -->
+
+        <button
+            class="menu"
+            id="menu"
+            aria-label="Open menu">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="contact-hero">
+
+
+    <div class="hero-grid"></div>
+
+    <div class="hero-orb one"></div>
+
+    <div class="hero-orb two"></div>
+
+
+    <div class="container hero-inner">
+
+
+        <!-- HERO CONTENT -->
+
+        <div class="hero-content reveal-left">
+
+            <div class="hero-kicker">
+
+                MILISYS BY MATHEW'S MILLS
+
+            </div>
+
+
+            <h1 class="hero-title">
+
+                Let's
+
+                <br>
+
+                <em>connect.</em>
+
+            </h1>
+
+
+            <p class="hero-text">
+
+                Milisys is the production unit of
+                Mathew's Mills — where quality
+                ingredients, modern production and
+                traditional food values come together.
+
+                <br><br>
+
+                Whether you have a product enquiry,
+                business opportunity, distribution
+                requirement or simply want to know
+                more about us, our team is ready to
+                connect with you.
+
+            </p>
+
+
+            <div class="hero-mini">
+
+                <span>
+                    Quality
+                </span>
+
+                <span>
+                    Production
+                </span>
+
+                <span>
+                    Tradition
+                </span>
+
+                <span>
+                    Freshness
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3D HERO -->
+
+        <div class="hero-stage reveal">
+
+            <div class="production-3d"
+                 id="production3D">
+
+
+                <div class="orbit"></div>
+
+                <div class="orbit two"></div>
+
+                <div class="orbit three"></div>
+
+
+                <!-- MAIN CARD -->
+
+                <div class="production-card">
+
+
+                    <div class="production-image">
+
+                        <!-- CHANGE HERO IMAGE -->
+
+                        <img
+                            src="img/milisys.png"
+                            alt="Milisys Production Unit">
+
+                    </div>
+
+
+                    <div class="production-content">
+
+                        <div class="production-label">
+
+                            PRODUCTION UNIT
+
+                        </div>
+
+                        <h3>
+                            Milisys
+                        </h3>
+
+                        <p>
+                            The production unit
+                            of Mathew's Mills.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FLOATING LABELS -->
+
+                <div class="data-pill pill-one">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Call Us
+
+                </div>
+
+
+                <div class="data-pill pill-two">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    WhatsApp
+
+                </div>
+
+
+                <div class="data-pill pill-three">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Kottayam
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="scroll-indicator">
+
+        Scroll
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT DETAILS
+===================================================== -->
+
+<section class="section contact-details">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="kicker">
+                CONTACT DETAILS
+            </div>
+
+            <h2 class="section-title">
+
+                We're here
+
+                <br>
+
+                <em>to help.</em>
+
+            </h2>
+
+            <p class="section-description">
+
+                Connect with Milisys by phone,
+                WhatsApp or email. Our team is
+                available for product, business,
+                wholesale and distribution enquiries.
+
+            </p>
+
+        </div>
+
+
+        <div class="info-grid">
+
+
+            <!-- =================================================
+                 PHONE
+            ================================================== -->
+
+            <div class="info-card reveal"
+                 style="--card-image:url('img/call.png');">
+
+
+                <div class="card-bg"></div>
+
+                <div class="card-overlay"></div>
+
+                <div class="led-border"></div>
+
+                <div class="led-glow"></div>
+
+
+                <div class="card-content">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Phone
+                    </h3>
+
+
+                    <p>
+                        Speak directly with the
+                        Milisys team.
+                    </p>
+
+
+                    <a
+                        href="tel:+919562762637"
+                        class="info-link">
+
+                        +91 95627 62637
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 WHATSAPP
+            ================================================== -->
+
+            <div class="info-card reveal"
+                 style="--card-image:url('img/whatsapp.png');">
+
+
+                <div class="card-bg"></div>
+
+                <div class="card-overlay"></div>
+
+                <div class="led-border"></div>
+
+                <div class="led-glow"></div>
+
+
+                <div class="card-content">
+
+                    <div class="info-icon">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </div>
+
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+
+                    <p>
+                        Message us directly
+                        on WhatsApp.
+                    </p>
+
+
+                    <a
+                        href="https://wa.me/919562762637"
+                        target="_blank"
+                        rel="noopener"
+                        class="info-link">
+
+                        Chat on WhatsApp
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 EMAIL
+            ================================================== -->
+
+            <div class="info-card email-card reveal"
+                 style="--card-image:url('img/mail.png');">
+
+
+                <div class="card-bg"></div>
+
+                <div class="card-overlay"></div>
+
+                <div class="led-border"></div>
+
+                <div class="led-glow"></div>
+
+
+                <div class="card-content">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Email
+                    </h3>
+
+
+                    <p>
+                        Send us your product,
+                        business or distribution enquiry.
+                    </p>
+
+
+                    <div class="email-list">
+
+                        <a
+                            href="mailto:milisysfoods@gmail.com">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            milisysfoods@gmail.com
+
+                        </a>
+
+
+                        <a
+                            href="mailto:mathewsmillmanalumkal@gmail.com">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            mathewsmillmanalumkal@gmail.com
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 LOCATION
+            ================================================== -->
+
+            <div class="info-card reveal"
+                 style="--card-image:url('img/location.png');">
+
+
+                <div class="card-bg"></div>
+
+                <div class="card-overlay"></div>
+
+                <div class="led-border"></div>
+
+                <div class="led-glow"></div>
+
+
+                <div class="card-content">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Location
+                    </h3>
+
+
+                    <p>
+                        Find Mathew's Oil,
+                        Rice and Flour Mills.
+                    </p>
+
+
+                    <a
+                        href="#location"
+                        class="info-link">
+
+                        View Location
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PRODUCTION
+            ================================================== -->
+
+            <div class="info-card reveal"
+                 style="--card-image:url('img/milisys.png');">
+
+
+                <div class="card-bg"></div>
+
+                <div class="card-overlay"></div>
+
+                <div class="led-border"></div>
+
+                <div class="led-glow"></div>
+
+
+                <div class="card-content">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-industry"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Production Unit
+                    </h3>
+
+
+                    <p>
+                        Milisys is the production
+                        unit of Mathew's Mills.
+                    </p>
+
+
+                    <a
+                        href="#location"
+                        class="info-link">
+
+                        Find Our Unit
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BUSINESS ENQUIRY
+            ================================================== -->
+
+            <div class="info-card reveal"
+                 style="--card-image:url('img/Enquiry.png');">
+
+
+                <div class="card-bg"></div>
+
+                <div class="card-overlay"></div>
+
+                <div class="led-border"></div>
+
+                <div class="led-glow"></div>
+
+
+                <div class="card-content">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-handshake"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Business Enquiry
+                    </h3>
+
+
+                    <p>
+                        Product, wholesale,
+                        distribution and business enquiries.
+                    </p>
+
+
+                    <a
+                        href="mailto:milisysfoods@gmail.com"
+                        class="info-link">
+
+                        Send Enquiry
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SOCIAL MEDIA
+===================================================== -->
+
+<section class="section social-section">
+
+    <div class="container">
+
+
+        <div class="section-heading reveal">
+
+            <div class="kicker">
+                FOLLOW MILISYS
+            </div>
+
+            <h2 class="section-title">
+
+                Stay connected
+
+                <br>
+
+                <em>with us.</em>
+
+            </h2>
+
+            <p class="section-description">
+
+                Follow Milisys by Mathew's Mills
+                for products, updates, stories and
+                everything happening around our
+                production journey.
+
+            </p>
+
+        </div>
+
+
+        <div class="social-grid">
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="social-card reveal">
+
+                <div
+                    class="social-led">
+                </div>
+
+                <div class="social-inner">
+
+                    <div class="social-icon">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </div>
+
+                    <h3>
+                        Instagram
+                    </h3>
+
+                    <span>
+                        Follow us
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- FACEBOOK -->
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="social-card reveal">
+
+                <div
+                    class="social-led">
+                </div>
+
+                <div class="social-inner">
+
+                    <div class="social-icon">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </div>
+
+                    <h3>
+                        Facebook
+                    </h3>
+
+                    <span>
+                        Follow us
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- YOUTUBE -->
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                class="social-card reveal">
+
+                <div
+                    class="social-led">
+                </div>
+
+                <div class="social-inner">
+
+                    <div class="social-icon">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </div>
+
+                    <h3>
+                        YouTube
+                    </h3>
+
+                    <span>
+                        Watch us
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/919562762637"
+                target="_blank"
+                rel="noopener"
+                class="social-card reveal">
+
+                <div
+                    class="social-led">
+                </div>
+
+                <div class="social-inner">
+
+                    <div class="social-icon">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </div>
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+                    <span>
+                        Message us
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- PHONE -->
+
+            <a
+                href="tel:+919562762637"
+                class="social-card reveal">
+
+                <div
+                    class="social-led">
+                </div>
+
+                <div class="social-inner">
+
+                    <div class="social-icon">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                    </div>
+
+                    <h3>
+                        Call Us
+                    </h3>
+
+                    <span>
+                        +91 95627 62637
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LOCATION
+===================================================== -->
+
+<section
+    class="section location-section"
+    id="location">
+
+    <div class="container location-grid">
+
+
+        <!-- LOCATION INFORMATION -->
+
+        <div class="location-content reveal-left">
+
+            <div class="kicker">
+                FIND US
+            </div>
+
+
+            <h2 class="location-title">
+
+                Come
+
+                <br>
+
+                <em>visit.</em>
+
+            </h2>
+
+
+            <p class="location-description">
+
+                Milisys, the production unit of
+                Mathew's Mills, is located at
+                Poovathilappu, Kottayam.
+
+                <br><br>
+
+                Visit us and connect with the
+                production unit behind Milisys.
+
+            </p>
+
+
+            <div class="address-box">
+
+                <div class="address-row">
+
+
+                    <div class="address-icon">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Mathew's Oil, Rice and Flour Mills
+                        </strong>
+
+                        <span>
+
+                            Poovathilappu<br>
+
+                            Kottayam, Kerala<br>
+
+                            India
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MAP -->
+
+        <div class="map-box reveal">
+
+
+            <div class="map-glow"></div>
+
+            <div class="map-led"></div>
+
+
+            <div class="map-location-label">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Poovathilappu · Kottayam
+
+            </div>
+
+
+            <!-- GOOGLE MAP -->
+
+            <iframe
+
+                src="https://www.google.com/maps?q=9.6261173,76.6758728&z=17&output=embed"
+
+                loading="lazy"
+
+                allowfullscreen
+
+                referrerpolicy="no-referrer-when-downgrade">
+
+            </iframe>
+
+
+            <!-- OPEN GOOGLE MAPS -->
+
+            <a
+                href="https://www.google.com/maps/place/Mathew%E2%80%99s+Oil+,Rice+and+Flour+Mills,+Poovathilappu,+Kottayam/@9.6261226,76.6732979,17z/data=!3m1!4b1!4m6!3m5!1s0x3b06334b3d4eb2f7:0x3f95a60182560fbb!8m2!3d9.6261173!4d76.6758728!16s%2Fg%2F11t99551lc?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+
+                target="_blank"
+
+                rel="noopener"
+
+                class="map-button">
+
+                <i class="fa-solid fa-location-arrow"></i>
+
+                Open in Google Maps
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-inner">
+
+        <div>
+
+            © 2026
+
+            <strong>
+                JO-GEO WEB STUDIO
+            </strong>
+
+        </div>
+
+
+        <div>
+
+            Production with purpose.
+            Quality with tradition.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     MOBILE WHATSAPP
+===================================================== -->
+
+<a
+    href="https://wa.me/919562762637"
+    target="_blank"
+    rel="noopener"
+    class="mobile-whatsapp">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    Chat with Milisys
+
+</a>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   LOADER
+===================================================== */
+
+window.addEventListener("load", function(){
+
+    setTimeout(function(){
+
+        const loader =
+            document.getElementById("loader");
+
+        if(loader){
+
+            loader.classList.add("hide");
+
+        }
+
+    },600);
+
+});
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+const navbar =
+    document.getElementById("navbar");
+
+
+function updateNavbar(){
+
+    if(!navbar)
+        return;
+
+
+    if(window.scrollY > 40){
+
+        navbar.classList.add("scrolled");
+
+    }else{
+
+        navbar.classList.remove("scrolled");
+
+    }
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateNavbar,
+    {passive:true}
+);
+
+
+updateNavbar();
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+if(menuBtn && navLinks){
+
+    menuBtn.addEventListener(
+        "click",
+        function(){
+
+            navLinks.classList.toggle("open");
+
+
+            const icon =
+                menuBtn.querySelector("i");
+
+
+            if(
+                navLinks.classList.contains("open")
+            ){
+
+                icon.className =
+                    "fa-solid fa-xmark";
+
+            }else{
+
+                icon.className =
+                    "fa-solid fa-bars";
+
+            }
+
+        }
+    );
+
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function(link){
+
+            link.addEventListener(
+                "click",
+                function(){
+
+                    navLinks.classList.remove("open");
+
+                    const icon =
+                        menuBtn.querySelector("i");
+
+                    if(icon){
+
+                        icon.className =
+                            "fa-solid fa-bars";
+
+                    }
+
+                }
+            );
+
+        });
+
+}
+
+
+/* =====================================================
+   ESCAPE CLOSE MENU
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(e.key === "Escape"){
+
+            if(navLinks){
+
+                navLinks.classList.remove("open");
+
+            }
+
+
+            if(menuBtn){
+
+                const icon =
+                    menuBtn.querySelector("i");
+
+                if(icon){
+
+                    icon.className =
+                        "fa-solid fa-bars";
+
+                }
+
+            }
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal, .reveal-left"
+    );
+
+
+const revealObserver =
+    new IntersectionObserver(
+
+        function(entries){
+
+            entries.forEach(function(entry){
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add(
+                        "active"
+                    );
+
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+
+        {
+
+            threshold:.10,
+
+            rootMargin:
+                "0px 0px -50px 0px"
+
+        }
+
+    );
+
+
+revealElements.forEach(function(element){
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =====================================================
+   HERO 3D MOUSE TILT
+===================================================== */
+
+const production3D =
+    document.getElementById(
+        "production3D"
+    );
+
+
+const finePointer =
+    window.matchMedia(
+        "(pointer:fine)"
+    );
+
+
+if(
+    production3D &&
+    finePointer.matches
+){
+
+    production3D.addEventListener(
+        "mousemove",
+        function(e){
+
+            const rect =
+                production3D.getBoundingClientRect();
+
+
+            const x =
+                e.clientX - rect.left;
+
+
+            const y =
+                e.clientY - rect.top;
+
+
+            const centerX =
+                rect.width / 2;
+
+
+            const centerY =
+                rect.height / 2;
+
+
+            const rotateY =
+                ((x - centerX) / centerX) * 8;
+
+
+            const rotateX =
+                ((centerY - y) / centerY) * 6;
+
+
+            production3D.style.animation =
+                "none";
+
+
+            production3D.style.transform =
+
+                `translateY(-5px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)`;
+
+        }
+    );
+
+
+    production3D.addEventListener(
+        "mouseleave",
+        function(){
+
+            production3D.style.animation =
+                "productionFloat 7s ease-in-out infinite";
+
+            production3D.style.transform =
+                "";
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   CONTACT CARD 3D TILT
+===================================================== */
+
+const infoCards =
+    document.querySelectorAll(
+        ".info-card"
+    );
+
+
+if(finePointer.matches){
+
+    infoCards.forEach(function(card){
+
+        card.addEventListener(
+            "mousemove",
+            function(e){
+
+                const rect =
+                    card.getBoundingClientRect();
+
+
+                const x =
+                    e.clientX - rect.left;
+
+
+                const y =
+                    e.clientY - rect.top;
+
+
+                const rotateY =
+                    ((x - rect.width / 2)
+                    / rect.width) * 5;
+
+
+                const rotateX =
+                    ((rect.height / 2 - y)
+                    / rect.height) * 5;
+
+
+                card.style.transform =
+
+                    `translateY(-10px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)
+                     scale(1.01)`;
+
+            }
+        );
+
+
+        card.addEventListener(
+            "mouseleave",
+            function(){
+
+                card.style.transform =
+                    "";
+
+            }
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+   SOCIAL CARD 3D
+===================================================== */
+
+const socialCards =
+    document.querySelectorAll(
+        ".social-card"
+    );
+
+
+if(finePointer.matches){
+
+    socialCards.forEach(function(card){
+
+        card.addEventListener(
+            "mousemove",
+            function(e){
+
+                const rect =
+                    card.getBoundingClientRect();
+
+
+                const x =
+                    e.clientX - rect.left;
+
+
+                const y =
+                    e.clientY - rect.top;
+
+
+                const rotateY =
+                    ((x - rect.width / 2)
+                    / rect.width) * 4;
+
+
+                const rotateX =
+                    ((rect.height / 2 - y)
+                    / rect.height) * 4;
+
+
+                card.style.transform =
+
+                    `translateY(-8px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)`;
+
+            }
+        );
+
+
+        card.addEventListener(
+            "mouseleave",
+            function(){
+
+                card.style.transform =
+                    "";
+
+            }
+        );
+
+    });
+
+}
+
+
+/* =====================================================
+   PARALLAX HERO LIGHTS
+===================================================== */
+
+const orbOne =
+    document.querySelector(
+        ".hero-orb.one"
+    );
+
+
+const orbTwo =
+    document.querySelector(
+        ".hero-orb.two"
+    );
+
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        const scroll =
+            window.scrollY;
+
+
+        if(orbOne){
+
+            orbOne.style.marginTop =
+                `${scroll * .06}px`;
+
+        }
+
+
+        if(orbTwo){
+
+            orbTwo.style.marginTop =
+                `${scroll * -.035}px`;
+
+        }
+
+    },
+    {passive:true}
+);
+
+
+/* =====================================================
+   IMAGE FALLBACK
+===================================================== */
+
+document
+    .querySelectorAll("img")
+    .forEach(function(image){
+
+        image.addEventListener(
+            "error",
+            function(){
+
+                this.style.opacity = "0";
+
+            }
+        );
+
+    });
+
+
+</script>
+<script>
+
+/* =========================================================
+   HEADER SCROLL
+========================================================= */
+
+const navbar =
+    document.getElementById("navbar");
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        if (window.scrollY > 40) {
+
+            navbar.classList.add("scrolled");
+
+        } else {
+
+            navbar.classList.remove("scrolled");
+
+        }
+
+    },
+    { passive: true }
+);
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menu =
+    document.getElementById("menu");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+menu.addEventListener(
+    "click",
+    function () {
+
+        navLinks.classList.toggle("open");
+
+        const open =
+            navLinks.classList.contains("open");
+
+        menu.textContent =
+            open ? "×" : "☰";
+
+        menu.setAttribute(
+            "aria-label",
+            open
+                ? "Close menu"
+                : "Open menu"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CLOSE MENU WHEN LINK CLICKED
+========================================================= */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function (link) {
+
+        link.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.remove("open");
+
+                menu.textContent = "☰";
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   CLOSE MENU OUTSIDE
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function (event) {
+
+        if (
+            window.innerWidth <= 991 &&
+            navLinks.classList.contains("open") &&
+            !navLinks.contains(event.target) &&
+            !menu.contains(event.target)
+        ) {
+
+            navLinks.classList.remove("open");
+
+            menu.textContent = "☰";
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   RESET MOBILE MENU ON DESKTOP
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    function () {
+
+        if (window.innerWidth > 991) {
+
+            navLinks.classList.remove("open");
+
+            menu.textContent = "☰";
+
+        }
+
+    }
+);
+
+</script>
+</body>
+
+</html>
