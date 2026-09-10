@@ -96,286 +96,6 @@ button {
 
 
 /* =========================================================
-   HEADER
-========================================================= */
-
-.navbar {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-
-    z-index: 1000;
-
-    padding: 18px 0;
-
-    background:
-        rgba(247,244,237,.90);
-
-    backdrop-filter: blur(18px);
-
-    -webkit-backdrop-filter: blur(18px);
-
-    border-bottom:
-        1px solid rgba(25,23,19,.06);
-
-    transition:
-        padding .3s ease,
-        background .3s ease,
-        box-shadow .3s ease;
-}
-
-.navbar.scrolled {
-    padding: 11px 0;
-
-    background:
-        rgba(255,253,248,.97);
-
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.07);
-}
-
-.nav-inner {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-/* =========================================================
-   LOGO
-========================================================= */
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    flex-shrink:0;
-    text-decoration:none;
-}
-
-
-/* =========================================================
-   LOGO IMAGE CIRCLE
-========================================================= */
-
-.logo-mark{
-    width:50px;
-    height:50px;
-
-    border:1px solid var(--gold);
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    overflow:hidden;
-    flex-shrink:0;
-
-    background:#fffdf8;
-
-    box-shadow:
-        0 4px 15px rgba(0,0,0,.08);
-}
-
-
-/* LOGO IMAGE */
-
-.logo-mark img{
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-    display:block;
-
-    padding:4px;
-}
-
-
-/* =========================================================
-   MILISYS NAME
-========================================================= */
-
-.logo-text .milisys-name{
-    display:block;
-
-    font-family:
-        "Bookman Old Style",
-        Bookman,
-        Georgia,
-        serif;
-
-    font-size:20px;
-    font-weight:700;
-
-    line-height:1;
-
-    color:#4d7048 !important;
-
-    letter-spacing:.2px;
-}
-
-
-/* =========================================================
-   COMPANY SUBTITLE
-========================================================= */
-
-.logo-text .company-subtitle{
-    display:block;
-
-    margin-top:5px;
-
-    font-family:
-        "Bookman Old Style",
-        Bookman,
-        Georgia,
-        serif;
-
-    font-size:8px;
-    font-weight:700;
-
-    letter-spacing:1px;
-
-    line-height:1.2;
-
-    text-transform:uppercase;
-
-    color:#4a463e !important;
-}
-
-
-/* =========================================================
-   JO-GEO VENTURES
-========================================================= */
-
-.logo-text .company-subtitle .geo-ventures{
-    color:#e67e22 !important;
-
-    font-family:
-        "Bookman Old Style",
-        Bookman,
-        Georgia,
-        serif;
-
-    font-weight:700;
-}
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.nav-links {
-    display: flex;
-
-    align-items: center;
-
-    gap: 28px;
-}
-
-.nav-links > a {
-    position: relative;
-
-    font-size: 13px;
-
-    font-weight: 600;
-
-    white-space: nowrap;
-}
-
-.nav-links > a:not(.nav-order)::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -7px;
-
-    width: 0;
-    height: 1px;
-
-    background: var(--gold);
-
-    transition: width .3s ease;
-}
-
-.nav-links > a:not(.nav-order):hover::after {
-    width: 100%;
-}
-
-.nav-links .active {
-    color: var(--gold);
-}
-
-
-/* =========================================================
-   ORDER BUTTON
-========================================================= */
-
-.nav-order {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 43px;
-
-    padding:
-        11px 22px;
-
-    border-radius: 50px;
-
-    background: var(--dark);
-
-    color: white;
-
-    transition:
-        .3s ease;
-}
-
-.nav-order:hover {
-    background: var(--gold);
-
-    transform:
-        translateY(-2px);
-}
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-.menu {
-    display: none;
-
-    width: 43px;
-    height: 43px;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 0;
-
-    border-radius: 50%;
-
-    background: var(--dark);
-
-    color: white;
-
-    font-size: 19px;
-}
-
-
-/* =========================================================
    HERO
 ========================================================= */
 
@@ -1268,71 +988,15 @@ button {
             calc(100% - 40px);
     }
 
-    .menu {
-        display: flex;
-    }
+    
 
-    .nav-links {
-        position: fixed;
+    
 
-        top: 76px;
+    
 
-        left: 20px;
-        right: 20px;
+    
 
-        padding: 20px;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0;
-
-        background:
-            rgba(255,253,248,.98);
-
-        backdrop-filter: blur(20px);
-
-        border:
-            1px solid var(--line);
-
-        border-radius: 20px;
-
-        box-shadow:
-            0 25px 60px
-            rgba(0,0,0,.12);
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        transform:
-            translateY(-15px);
-
-        transition: .3s ease;
-    }
-
-    .nav-links.open {
-        opacity: 1;
-
-        visibility: visible;
-
-        transform:
-            translateY(0);
-    }
-
-    .nav-links > a {
-        padding: 14px 5px;
-
-        border-bottom:
-            1px solid var(--line);
-    }
-
-    .nav-links .nav-order {
-        width: 100%;
-
-        margin-top: 14px;
-    }
+    .nav-links 
 
 
     .intro-grid,
@@ -1499,40 +1163,17 @@ button {
             calc(100% - 24px);
     }
 
-    .navbar {
-        padding:
-            11px 0;
-    }
+    
 
-    .logo-mark {
-        width: 55px;
-        height: 55px;
+    
 
-        font-size: 14px;
-    }
+    
 
-    .logo-text strong {
-        font-size: 17px;
-    }
+    
 
-    .logo-text span {
-        font-size: 7px;
-        letter-spacing: 1px;
-    }
+    
 
-    .menu {
-        width: 40px;
-        height: 40px;
-    }
-
-    .nav-links {
-        top: 67px;
-
-        left: 12px;
-        right: 12px;
-
-        padding: 16px;
-    }
+    
 
 
     .story-hero {
@@ -6424,10 +6065,6 @@ top: 50%;
 
 }
 
-/* =====================================================
-LOGO PLATFORM
-===================================================== */
-
 .logo-platform {
 
 
@@ -6473,10 +6110,6 @@ animation: floatingLogo 5s ease-in-out infinite;
 
 
 }
-
-/* =====================================================
-LOGO CARD
-===================================================== */
 
 .logo-card {
 
@@ -7702,12 +7335,12 @@ img,svg,video,canvas{max-width:100%;height:auto}
 }
 @media(max-width:800px){
  .container{width:calc(100% - 32px)}
- .navbar{padding:10px 0}
- .nav-inner{gap:12px}
- .logo{min-width:0}
- .logo-mark{width:48px;height:48px}
- .logo-text .milisys-name{font-size:17px}
- .logo-text .company-subtitle{font-size:7px}
+ 
+ 
+ 
+ 
+ 
+ 
  .story-hero{padding:105px 16px 70px}
  .story-hero h1{font-size:clamp(46px,14vw,68px);letter-spacing:-2px}
  .story-hero p{font-size:clamp(14px,3.7vw,17px);margin-top:24px}
@@ -7725,8 +7358,8 @@ img,svg,video,canvas{max-width:100%;height:auto}
 }
 @media(max-width:480px){
  .container{width:calc(100% - 24px)}
- .menu{flex:0 0 40px}
- .nav-links{left:12px;right:12px;max-height:calc(100svh - 80px);overflow:auto}
+ 
+ 
  .story-hero{padding:95px 12px 60px}
  .story-hero h1{font-size:clamp(42px,14vw,58px)}
  .story-hero-content,.story-hero-image{max-width:100%}
@@ -8024,114 +7657,472 @@ img,svg,video,canvas{max-width:100%;height:auto}
     font-size: clamp(34px, 10vw, 42px) !important;
   }
 }
-.menu {
-    animation: none !important;
-    transform: none !important;
-    transition: none !important;
+
+</style>
+<style>
+
+/* =========================================================
+   UPDATED — THE MILISYS APPROACH
+   Replaces the old 3D/orbit production visual only.
+   ========================================================= */
+
+.approach-new{
+    position:relative;
+    min-height:auto !important;
+    padding:120px 0 !important;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(183,138,69,.12), transparent 28%),
+        radial-gradient(circle at 90% 85%, rgba(77,112,72,.12), transparent 30%),
+        linear-gradient(135deg,#11130f 0%,#181b16 55%,#10120f 100%);
+    color:#fff;
+    perspective:none !important;
 }
 
-.menu:hover,
-.menu:focus,
-.menu:active {
-    animation: none !important;
-    transform: none !important;
+.approach-bg-shape{
+    position:absolute;
+    border:1px solid rgba(212,173,112,.12);
+    border-radius:50%;
+    pointer-events:none;
 }
+
+.approach-shape-one{
+    width:520px;
+    height:520px;
+    right:-260px;
+    top:-260px;
+}
+
+.approach-shape-two{
+    width:360px;
+    height:360px;
+    left:-220px;
+    bottom:-220px;
+}
+
+.approach-container{
+    position:relative;
+    z-index:2;
+    max-width:1180px !important;
+}
+
+.approach-heading{
+    max-width:820px;
+    margin:0 auto 65px;
+    text-align:center;
+}
+
+.approach-kicker{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    color:#d4ad70;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+.approach-kicker span{
+    width:38px;
+    height:1px;
+    background:#d4ad70;
+}
+
+.approach-heading h2{
+    margin:20px 0 20px;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(44px,6vw,76px);
+    line-height:.98;
+    letter-spacing:-3px;
+}
+
+.approach-heading h2 em{
+    display:block;
+    color:#d4ad70;
+    font-style:normal;
+    font-weight:500;
+}
+
+.approach-lead{
+    max-width:690px;
+    margin:auto;
+    color:rgba(255,255,255,.66);
+    font-size:14px;
+    line-height:1.9;
+}
+
+.approach-feature-grid{
+    display:grid;
+    grid-template-columns:1.35fr 1fr 1fr;
+    grid-template-areas:
+        "main tradition process"
+        "main quality quality";
+    gap:18px;
+}
+
+.approach-feature{
+    position:relative;
+    min-height:265px;
+    padding:30px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:22px;
+    background:rgba(255,255,255,.045);
+    backdrop-filter:blur(8px);
+    transition:transform .35s ease,border-color .35s ease,background .35s ease,box-shadow .35s ease;
+}
+
+.approach-feature:hover{
+    transform:translateY(-7px);
+    border-color:rgba(212,173,112,.38);
+    background:rgba(255,255,255,.07);
+    box-shadow:0 25px 60px rgba(0,0,0,.22);
+}
+
+.approach-feature-main{
+    grid-area:main;
+    min-height:548px;
+    padding:38px;
+    background:
+        linear-gradient(145deg,rgba(183,138,69,.13),rgba(255,255,255,.035));
+}
+
+.approach-feature:nth-child(2){grid-area:tradition;}
+.approach-feature:nth-child(3){grid-area:process;}
+.approach-feature:nth-child(4){grid-area:quality;min-height:265px;}
+
+.feature-topline{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.feature-number{
+    color:#d4ad70;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.feature-caption{
+    color:rgba(255,255,255,.40);
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.feature-symbol{
+    width:96px;
+    height:96px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:62px 0 28px;
+    border:1px solid rgba(212,173,112,.42);
+    border-radius:50%;
+    color:#d4ad70;
+    font-family:"Playfair Display",serif;
+    font-size:42px;
+    box-shadow:0 0 0 12px rgba(212,173,112,.035);
+}
+
+.feature-icon{
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:34px 0 22px;
+    border:1px solid rgba(212,173,112,.35);
+    border-radius:50%;
+    color:#d4ad70;
+    font-size:19px;
+}
+
+.approach-feature h3{
+    margin-bottom:13px;
+    font-family:"Playfair Display",serif;
+    font-size:26px;
+    line-height:1.1;
+}
+
+.approach-feature-main h3{
+    max-width:440px;
+    font-size:42px;
+}
+
+.approach-feature h3 strong{
+    color:#d4ad70;
+    font-weight:500;
+}
+
+.approach-feature p{
+    max-width:540px;
+    color:rgba(255,255,255,.58);
+    font-size:12px;
+    line-height:1.9;
+}
+
+.feature-tag{
+    display:inline-block;
+    margin-top:22px;
+    padding:8px 11px;
+    border:1px solid rgba(212,173,112,.18);
+    border-radius:30px;
+    color:rgba(212,173,112,.80);
+    font-size:8px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+.approach-bottom{
+    display:grid;
+    grid-template-columns:1.35fr 1fr;
+    gap:18px;
+    margin-top:18px;
+}
+
+.approach-quote{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    padding:28px 30px;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:20px;
+    background:rgba(255,255,255,.035);
+}
+
+.quote-mark{
+    color:#d4ad70;
+    font-family:"Playfair Display",serif;
+    font-size:55px;
+    line-height:.7;
+}
+
+.approach-quote strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:20px;
+}
+
+.approach-quote p{
+    margin-top:8px;
+    color:rgba(255,255,255,.52);
+    font-size:11px;
+    line-height:1.8;
+}
+
+.approach-pillars{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.approach-pillars div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:20px;
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:18px;
+    background:rgba(255,255,255,.035);
+}
+
+.approach-pillars b{
+    color:#d4ad70;
+    font-size:9px;
+    letter-spacing:2px;
+}
+
+.approach-pillars span{
+    margin-top:12px;
+    color:#fff;
+    font-family:"Playfair Display",serif;
+    font-size:17px;
+}
+
+/* keep existing reveal behaviour compatible */
+.reveal-production{
+    opacity:1;
+    transform:none;
+}
+
+@media (max-width:991px){
+    .approach-new{
+        padding:90px 0 !important;
+    }
+
+    .approach-feature-grid{
+        grid-template-columns:1fr 1fr;
+        grid-template-areas:
+            "main main"
+            "tradition process"
+            "quality quality";
+    }
+
+    .approach-feature-main{
+        min-height:440px;
+    }
+
+    .approach-bottom{
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:767px){
+    .approach-new{
+        padding:70px 0 !important;
+    }
+
+    .approach-heading{
+        margin-bottom:40px;
+    }
+
+    .approach-kicker{
+        gap:8px;
+        font-size:8px;
+        letter-spacing:2.5px;
+    }
+
+    .approach-kicker span{
+        width:22px;
+    }
+
+    .approach-heading h2{
+        margin-top:16px;
+        font-size:clamp(39px,12vw,55px);
+        letter-spacing:-2px;
+    }
+
+    .approach-lead{
+        font-size:12px;
+    }
+
+    .approach-feature-grid{
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "main"
+            "tradition"
+            "process"
+            "quality";
+    }
+
+    .approach-feature,
+    .approach-feature-main,
+    .approach-feature:nth-child(4){
+        min-height:auto;
+        padding:25px;
+    }
+
+    .feature-symbol{
+        margin:40px 0 24px;
+    }
+
+    .approach-feature-main h3{
+        font-size:34px;
+    }
+
+    .feature-icon{
+        margin:27px 0 20px;
+    }
+
+    .approach-bottom{
+        gap:14px;
+    }
+
+    .approach-quote{
+        padding:23px;
+    }
+
+    .quote-mark{
+        font-size:43px;
+    }
+
+    .approach-quote strong{
+        font-size:17px;
+    }
+
+    .approach-pillars{
+        grid-template-columns:1fr;
+    }
+
+    .approach-pillars div{
+        padding:17px 20px;
+    }
+}
+
+@media (max-width:480px){
+    .approach-feature-main h3{
+        font-size:31px;
+    }
+
+    .approach-feature p{
+        font-size:11px;
+    }
+}
+
+
+/* =========================================================
+   ROOTED IN TRADITION — MOBILE ORDER
+   Mobile: image first, then text.
+   Laptop + tablet: keep the existing side-by-side layout.
+========================================================= */
+@media (max-width: 767px) {
+
+    .story-intro .intro-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 30px !important;
+    }
+
+    .story-intro .intro-image {
+        order: 1 !important;
+        width: 100% !important;
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    .story-intro .intro-image img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: 450px !important;
+        object-fit: cover !important;
+    }
+
+    .story-intro .intro-content {
+        order: 2 !important;
+        width: 100% !important;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .story-intro .intro-grid {
+        gap: 26px !important;
+    }
+
+    .story-intro .intro-image {
+        min-height: 0 !important;
+    }
+
+    .story-intro .intro-image img {
+        height: auto !important;
+        max-height: 380px !important;
+    }
+
+}
+
 </style>
 </head>
 
 
 <body>
-
-
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
-<header class="navbar" id="navbar">
-
-    <div class="container nav-inner">
-
-        <!-- =================================================
-             LOGO
-        ================================================== -->
-
-        <a href="index.html" class="logo">
-
-            <!-- LOGO IMAGE -->
-            <div class="logo-mark">
-                <img
-                    src="img/milisys logo breakdown-09.png"
-                    alt="Milisys Logo"
-                >
-            </div>
-
-            <!-- LOGO TEXT -->
-            <div class="logo-text">
-
-                <strong class="milisys-name">
-                    Milisys
-                </strong>
-
-                <span class="company-subtitle">
-                    By Mathew's Mills |
-                    <span class="geo-ventures">
-                        JO-GEO VENTURES
-                    </span>
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- =================================================
-             NAVIGATION
-        ================================================== -->
-
-        <nav class="nav-links" id="navLinks">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="order now.html">
-                Order Now
-            </a>
-
-            <a href="our story.html" class="active">
-                Our Story
-            </a>
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
-            <a href="contact.html" class="nav-order">
-                Contact Now
-            </a>
-
-        </nav>
-
-
-        <!-- =================================================
-             MOBILE MENU
-        ================================================== -->
-
-        <button
-            class="menu"
-            id="menu"
-            aria-label="Open menu">
-
-            ☰
-
-        </button>
-
-    </div>
-
-</header>
-
-
 
 
 
@@ -8628,134 +8619,145 @@ img,svg,video,canvas{max-width:100%;height:auto}
 </section>
 
 
-<section class="production-section" id="production">
+<section class="production-section approach-new" id="production">
 
-<!-- Ambient lighting -->
-<div class="production-light light-one"></div>
-<div class="production-light light-two"></div>
-<div class="production-light light-three"></div>
+    <div class="approach-bg-shape approach-shape-one"></div>
+    <div class="approach-bg-shape approach-shape-two"></div>
 
-<!-- Background grid -->
-<div class="production-grid-bg"></div>
+    <div class="container approach-container">
 
-<div class="container production-grid">
-
-    <!-- ================= LEFT CONTENT ================= -->
-
-    <div class="production-content reveal-production">
-
-        <small class="production-label">
-            THE MILISYS APPROACH
-        </small>
-
-        <h2>
-            Tradition Meets
-            <span>Modern Production</span>
-        </h2>
-
-        <p>
-            Milisys is designed to bring together the
-            familiarity of traditional food with the
-            consistency expected from modern production.
-        </p>
-
-        <p>
-            Our product range covers everyday kitchen
-            essentials including coconut oil, spice
-            powders, masalas, breakfast products,
-            batter and coffee.
-        </p>
-
-        <p>
-            The goal is simple: make good food products
-            accessible, dependable and part of everyday
-            family life.
-        </p>
-
-        <div class="production-line"></div>
-
-        <div class="production-stats">
-
-            <div>
-                <strong>01</strong>
-                <span>Traditional Taste</span>
+        <div class="approach-heading reveal-production">
+            <div class="approach-kicker">
+                <span></span>
+                THE MILISYS APPROACH
+                <span></span>
             </div>
 
-            <div>
-                <strong>02</strong>
-                <span>Modern Process</span>
+            <h2>
+                Tradition Meets
+                <em>Modern Production</em>
+            </h2>
+
+            <p class="approach-lead">
+                We bring the familiarity of traditional food together
+                with thoughtful modern production — creating products
+                made for today's everyday kitchens.
+            </p>
+        </div>
+
+        <div class="approach-feature-grid">
+
+            <article class="approach-feature approach-feature-main reveal-production">
+                <div class="feature-topline">
+                    <span class="feature-number">01</span>
+                    <span class="feature-caption">OUR FOUNDATION</span>
+                </div>
+
+                <div class="feature-symbol">M</div>
+
+                <h3>
+                    Familiar flavours,
+                    <strong>carefully made.</strong>
+                </h3>
+
+                <p>
+                    Milisys is built around the belief that everyday food
+                    should feel authentic, dependable and easy to bring home.
+                    We respect traditional food values while using modern
+                    processes to deliver consistent quality.
+                </p>
+            </article>
+
+            <article class="approach-feature reveal-production">
+                <div class="feature-topline">
+                    <span class="feature-number">02</span>
+                    <span class="feature-caption">TRADITION</span>
+                </div>
+
+                <div class="feature-icon">✦</div>
+
+                <h3>Traditional Taste</h3>
+
+                <p>
+                    The flavours, ingredients and food habits people know
+                    and love remain at the heart of what we create.
+                </p>
+
+                <div class="feature-tag">ROOTED IN EXPERIENCE</div>
+            </article>
+
+            <article class="approach-feature reveal-production">
+                <div class="feature-topline">
+                    <span class="feature-number">03</span>
+                    <span class="feature-caption">PRODUCTION</span>
+                </div>
+
+                <div class="feature-icon">+</div>
+
+                <h3>Modern Process</h3>
+
+                <p>
+                    Modern production practices help us focus on
+                    consistency, cleanliness, reliability and repeatable
+                    quality across our range.
+                </p>
+
+                <div class="feature-tag">BUILT FOR CONSISTENCY</div>
+            </article>
+
+            <article class="approach-feature reveal-production">
+                <div class="feature-topline">
+                    <span class="feature-number">04</span>
+                    <span class="feature-caption">EVERYDAY</span>
+                </div>
+
+                <div class="feature-icon">✓</div>
+
+                <h3>Everyday Quality</h3>
+
+                <p>
+                    From breakfast essentials and spice powders to oil,
+                    masalas and coffee, our focus stays on products that
+                    fit naturally into everyday life.
+                </p>
+
+                <div class="feature-tag">MADE FOR EVERY KITCHEN</div>
+            </article>
+
+        </div>
+
+        <div class="approach-bottom reveal-production">
+
+            <div class="approach-quote">
+                <span class="quote-mark">“</span>
+                <div>
+                    <strong>Good food should be simple to trust.</strong>
+                    <p>
+                        That is the standard behind the Milisys approach —
+                        from the way we think about ingredients to the way
+                        our products become part of family meals.
+                    </p>
+                </div>
             </div>
 
-            <div>
-                <strong>03</strong>
-                <span>Everyday Quality</span>
+            <div class="approach-pillars">
+                <div>
+                    <b>01</b>
+                    <span>Authenticity</span>
+                </div>
+                <div>
+                    <b>02</b>
+                    <span>Consistency</span>
+                </div>
+                <div>
+                    <b>03</b>
+                    <span>Care</span>
+                </div>
             </div>
 
         </div>
 
     </div>
-
-
-    <!-- ================= 3D VISUAL ================= -->
-
-    <div class="production-visual">
-
-        <div class="production-3d-scene" id="productionScene">
-
-            <!-- Glow behind logo -->
-            <div class="logo-energy"></div>
-
-            <!-- Light rays -->
-            <div class="light-ray ray-one"></div>
-            <div class="light-ray ray-two"></div>
-            <div class="light-ray ray-three"></div>
-
-            <!-- Outer 3D orbit -->
-            <div class="orbit orbit-one">
-                <span class="orbit-dot dot-one"></span>
-            </div>
-
-            <div class="orbit orbit-two">
-                <span class="orbit-dot dot-two"></span>
-            </div>
-
-            <div class="orbit orbit-three">
-                <span class="orbit-dot dot-three"></span>
-            </div>
-
-
-            <!-- Floating particles -->
-
-            <span class="particle p1"></span>
-            <span class="particle p2"></span>
-            <span class="particle p3"></span>
-            <span class="particle p4"></span>
-            <span class="particle p5"></span>
-            <span class="particle p6"></span>
-            <span class="particle p7"></span>
-            <span class="particle p8"></span>
-
-
-           
-
-
-            <!-- Bottom platform -->
-
-            <div class="production-base">
-
-                <div class="base-ring"></div>
-
-                <div class="base-light"></div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
 </section>
 
 
@@ -8796,135 +8798,6 @@ img,svg,video,canvas{max-width:100%;height:auto}
      JAVASCRIPT
 ===================================================== -->
 
-<script>
-
-/* =========================================================
-   HEADER SCROLL
-========================================================= */
-
-const navbar =
-    document.getElementById("navbar");
-
-window.addEventListener(
-    "scroll",
-    function () {
-
-        if (window.scrollY > 40) {
-
-            navbar.classList.add("scrolled");
-
-        } else {
-
-            navbar.classList.remove("scrolled");
-
-        }
-
-    },
-    { passive: true }
-);
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const menu =
-    document.getElementById("menu");
-
-const navLinks =
-    document.getElementById("navLinks");
-
-
-menu.addEventListener(
-    "click",
-    function () {
-
-        navLinks.classList.toggle("open");
-
-        const open =
-            navLinks.classList.contains("open");
-
-        menu.textContent =
-            open ? "×" : "☰";
-
-        menu.setAttribute(
-            "aria-label",
-            open
-                ? "Close menu"
-                : "Open menu"
-        );
-
-    }
-);
-
-
-/* =========================================================
-   CLOSE MENU WHEN LINK CLICKED
-========================================================= */
-
-document
-    .querySelectorAll(".nav-links a")
-    .forEach(function (link) {
-
-        link.addEventListener(
-            "click",
-            function () {
-
-                navLinks.classList.remove("open");
-
-                menu.textContent = "☰";
-
-            }
-        );
-
-    });
-
-
-/* =========================================================
-   CLOSE MENU OUTSIDE
-========================================================= */
-
-document.addEventListener(
-    "click",
-    function (event) {
-
-        if (
-            window.innerWidth <= 991 &&
-            navLinks.classList.contains("open") &&
-            !navLinks.contains(event.target) &&
-            !menu.contains(event.target)
-        ) {
-
-            navLinks.classList.remove("open");
-
-            menu.textContent = "☰";
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   RESET MOBILE MENU ON DESKTOP
-========================================================= */
-
-window.addEventListener(
-    "resize",
-    function () {
-
-        if (window.innerWidth > 991) {
-
-            navLinks.classList.remove("open");
-
-            menu.textContent = "☰";
-
-        }
-
-    }
-);
-
-</script>
 <script>
 /* =====================================================
    MILISYS VALUES — MOUSE 3D TILT
@@ -9394,3 +9267,4 @@ document.addEventListener("DOMContentLoaded", function () {
 </body>
 
 </html>
+
