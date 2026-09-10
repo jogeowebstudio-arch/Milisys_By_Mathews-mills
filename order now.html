@@ -14,9 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
       rel="stylesheet">
 
-
 <style>
-
 
 /* =========================================================
    ROOT
@@ -95,235 +93,18 @@ button {
 
 
 /* =========================================================
-   HEADER
-========================================================= */
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-    padding: 18px 0;
-
-    background: rgba(247,244,237,.90);
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    border-bottom: 1px solid rgba(25,23,19,.06);
-
-    transition:
-        padding .3s ease,
-        background .3s ease,
-        box-shadow .3s ease;
-}
-
-.navbar.scrolled {
-    padding: 11px 0;
-
-    background: rgba(255,253,248,.97);
-
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.07);
-}
-
-.nav-inner {
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    flex-shrink: 0;
-}
-
-.logo-mark {
-    width: 55px;
-    height: 55px;
-
-    border: 1px solid var(--gold);
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--gold);
-
-    font-family: "Playfair Display", serif;
-    font-size: 17px;
-
-    flex-shrink: 0;
-}
-
-.logo-text strong {
-    display: block;
-
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-    line-height: 1;
-}
-
-.logo-text span {
-    display: block;
-
-    margin-top: 4px;
-
-    color: var(--muted);
-
-    font-size: 8px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    gap: 28px;
-}
-
-.nav-links > a {
-    position: relative;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    white-space: nowrap;
-}
-
-.nav-links > a:not(.nav-order)::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -7px;
-
-    width: 0;
-    height: 1px;
-
-    background: var(--gold);
-
-    transition: width .3s ease;
-}
-
-.nav-links > a:not(.nav-order):hover::after {
-    width: 100%;
-}
-
-.nav-links .active {
-    color: var(--gold);
-}
-
-
-/* =========================================================
-   NAV ORDER BUTTON
-========================================================= */
-
-.nav-order {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 43px;
-
-    padding: 11px 22px;
-
-    border-radius: 50px;
-
-    background: var(--dark);
-
-    border: 1px solid var(--dark);
-
-    color: white;
-
-    font-size: 12px !important;
-
-    transition:
-        transform .3s ease,
-        background .3s ease,
-        box-shadow .3s ease;
-}
-
-.nav-order:hover {
-    background: var(--gold);
-
-    border-color: var(--gold);
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 10px 25px rgba(183,138,69,.25);
-}
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-.menu {
-    display: none;
-
-    width: 43px;
-    height: 43px;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 0;
-    border-radius: 50%;
-
-    background: var(--dark);
-
-    color: white;
-
-    font-size: 19px;
-
-    flex-shrink: 0;
-}
-
-
-/* =========================================================
    HERO — DESKTOP
 ========================================================= */
 
 .order-hero {
     position: relative;
-
     width: 100%;
     min-height: 92vh;
-
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
     background: #17130e;
-
     perspective: 1400px;
 }
 
@@ -334,11 +115,8 @@ button {
 
 .order-scene {
     position: absolute;
-
     inset: 0;
-
     overflow: hidden;
-
     transform-style: preserve-3d;
 }
 
@@ -349,26 +127,18 @@ button {
 
 .scene-image {
     position: absolute;
-
     inset: -5%;
-
     overflow: hidden;
-
     transform-style: preserve-3d;
-
-    animation:
-        cameraMove 12s ease-in-out infinite alternate;
+    animation: cameraMove 12s ease-in-out infinite alternate;
 }
 
 .scene-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     object-position: center;
-
     display: block;
-
     filter:
         saturate(1.08)
         contrast(1.04)
@@ -381,7 +151,6 @@ button {
 ========================================================= */
 
 @keyframes cameraMove {
-
     0% {
         transform:
             scale(1.03)
@@ -430,11 +199,8 @@ button {
 
 .order-scene::after {
     content: "";
-
     position: absolute;
-
     inset: 0;
-
     background:
         linear-gradient(
             90deg,
@@ -443,9 +209,7 @@ button {
             rgba(10,8,5,.08) 65%,
             rgba(10,8,5,.18) 100%
         );
-
     pointer-events: none;
-
     z-index: 2;
 }
 
@@ -456,32 +220,24 @@ button {
 
 .light-beam {
     position: absolute;
-
     z-index: 4;
-
     width: 450px;
     height: 450px;
-
     border-radius: 50%;
-
     background:
         radial-gradient(
             circle,
             rgba(255,194,92,.20),
             rgba(255,194,92,0) 70%
         );
-
     filter: blur(10px);
-
     pointer-events: none;
-
     mix-blend-mode: screen;
 }
 
 .light-one {
     left: 35%;
     top: 5%;
-
     animation:
         lightMove 7s ease-in-out infinite alternate;
 }
@@ -489,21 +245,17 @@ button {
 .light-two {
     right: 8%;
     bottom: -10%;
-
     width: 550px;
     height: 550px;
-
     animation:
         lightMoveTwo 9s ease-in-out infinite alternate;
 }
 
 @keyframes lightMove {
-
     from {
         transform:
             translate(-30px,-10px)
             scale(.8);
-
         opacity: .35;
     }
 
@@ -511,18 +263,15 @@ button {
         transform:
             translate(80px,45px)
             scale(1.2);
-
         opacity: .65;
     }
 }
 
 @keyframes lightMoveTwo {
-
     from {
         transform:
             translate(30px,20px)
             scale(.85);
-
         opacity: .3;
     }
 
@@ -530,7 +279,6 @@ button {
         transform:
             translate(-80px,-40px)
             scale(1.15);
-
         opacity: .6;
     }
 }
@@ -542,40 +290,31 @@ button {
 
 .order-hero-content {
     position: relative;
-
     z-index: 10;
-
     width: min(
         550px,
         calc(100% - 50px)
     );
-
     margin-left:
         max(
             5vw,
             calc((100vw - 1240px) / 2)
         );
-
     padding: 100px 0;
-
     color: white;
-
     animation:
         contentEnter 1.2s ease both;
 }
 
 @keyframes contentEnter {
-
     from {
         opacity: 0;
-
         transform:
             translateY(35px);
     }
 
     to {
         opacity: 1;
-
         transform:
             translateY(0);
     }
@@ -588,31 +327,20 @@ button {
 
 .order-label {
     display: inline-flex;
-
     align-items: center;
-
     padding: 10px 17px;
-
     border:
         1px solid
         rgba(221,183,111,.55);
-
     border-radius: 50px;
-
     background:
         rgba(0,0,0,.28);
-
     backdrop-filter: blur(12px);
-
     color: #e1b96e;
-
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 3px;
-
     margin-bottom: 22px;
-
     box-shadow:
         0 10px 35px rgba(0,0,0,.15);
 }
@@ -624,30 +352,22 @@ button {
 
 .order-hero-content h1 {
     margin: 0;
-
     font-family:
         "Playfair Display",
         Georgia,
         serif;
-
     font-size:
         clamp(65px, 9vw, 125px);
-
     line-height: .82;
-
     letter-spacing: -5px;
-
     font-weight: 500;
-
     text-shadow:
         0 12px 35px rgba(0,0,0,.35);
 }
 
 .order-hero-content h1 span {
     display: block;
-
     color: #c99a52;
-
     font-style: italic;
 }
 
@@ -659,14 +379,10 @@ button {
 .order-hero-content p {
     width: 100%;
     max-width: 490px;
-
     margin-top: 30px;
-
     color:
         rgba(255,255,255,.82);
-
     font-size: 14px;
-
     line-height: 1.9;
 }
 
@@ -677,19 +393,13 @@ button {
 
 .particle {
     position: absolute;
-
     z-index: 8;
-
     width: 5px;
     height: 5px;
-
     border-radius: 50%;
-
     background: #e4b45e;
-
     box-shadow:
         0 0 15px rgba(228,180,94,.9);
-
     animation:
         particleFloat
         6s ease-in-out
@@ -704,45 +414,38 @@ button {
 .p2 {
     left: 65%;
     top: 18%;
-
     animation-delay: 1.2s;
 }
 
 .p3 {
     left: 73%;
     top: 65%;
-
     animation-delay: 2.2s;
 }
 
 .p4 {
     left: 45%;
     bottom: 20%;
-
     animation-delay: 3s;
 }
 
 .p5 {
     right: 15%;
     top: 35%;
-
     animation-delay: 1.7s;
 }
 
 .p6 {
     right: 35%;
     bottom: 18%;
-
     animation-delay: 4s;
 }
 
 @keyframes particleFloat {
-
     0%,100% {
         transform:
             translate3d(0,0,0)
             scale(.7);
-
         opacity: .2;
     }
 
@@ -750,7 +453,6 @@ button {
         transform:
             translate3d(20px,-40px,50px)
             scale(1.4);
-
         opacity: 1;
     }
 }
@@ -762,42 +464,32 @@ button {
 
 .scene-glow {
     position: absolute;
-
     z-index: 3;
-
     right: 28%;
     top: 30%;
-
     width: 180px;
     height: 180px;
-
     border-radius: 50%;
-
     background:
         radial-gradient(
             circle,
             rgba(255,205,117,.16),
             transparent 70%
         );
-
     filter: blur(15px);
-
     animation:
         glowPulse 4s ease-in-out infinite;
 }
 
 @keyframes glowPulse {
-
     0%,100% {
         opacity: .4;
-
         transform:
             scale(.9);
     }
 
     50% {
         opacity: .85;
-
         transform:
             scale(1.3);
     }
@@ -810,11 +502,9 @@ button {
 
 .order-section {
     width: 100%;
-
     padding:
         100px 0
         130px;
-
     background: var(--paper);
 }
 
@@ -824,17 +514,12 @@ button {
             calc(100% - 40px),
             1120px
         );
-
     margin: 0 auto;
-
     display: grid;
-
     grid-template-columns:
         minmax(0,1.15fr)
         minmax(320px,.85fr);
-
     gap: 28px;
-
     align-items: start;
 }
 
@@ -845,16 +530,11 @@ button {
 
 .order-card {
     min-width: 0;
-
     padding: 32px;
-
     background: white;
-
     border:
         1px solid var(--line);
-
     border-radius: 25px;
-
     box-shadow:
         0 15px 50px
         rgba(25,23,19,.06);
@@ -866,25 +546,19 @@ button {
 
 .card-heading small {
     color: var(--gold);
-
     font-size: 9px;
     font-weight: 700;
-
     letter-spacing: 3px;
-
     text-transform: uppercase;
 }
 
 .card-heading h2 {
     margin-top: 7px;
-
     font-family:
         "Playfair Display",
         serif;
-
     font-size:
         clamp(28px,4vw,34px);
-
     line-height: 1.1;
 }
 
@@ -895,10 +569,8 @@ button {
 
 .product-list {
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     gap: 14px;
 }
 
@@ -910,26 +582,18 @@ button {
 .order-product {
     width: 100%;
     min-width: 0;
-
     display: grid;
-
     grid-template-columns:
         75px
         minmax(0,1fr)
         auto;
-
     align-items: center;
-
     gap: 16px;
-
     padding: 12px;
-
     border:
         1px solid
         rgba(25,23,19,.08);
-
     border-radius: 17px;
-
     transition:
         transform .3s ease,
         border-color .3s ease,
@@ -938,10 +602,8 @@ button {
 
 .order-product:hover {
     transform: translateX(3px);
-
     border-color:
         rgba(183,138,69,.4);
-
     box-shadow:
         0 8px 25px
         rgba(25,23,19,.05);
@@ -955,22 +617,16 @@ button {
 .order-product-image {
     width: 75px;
     height: 75px;
-
     overflow: hidden;
-
     border-radius: 12px;
-
     background: #eeeae0;
-
     flex-shrink: 0;
 }
 
 .order-product-image img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     transition:
         transform .4s ease;
 }
@@ -991,35 +647,25 @@ button {
 
 .order-product-info h3 {
     margin-bottom: 3px;
-
     font-family:
         "Playfair Display",
         serif;
-
     font-size: 20px;
-
     line-height: 1.15;
-
     overflow-wrap: anywhere;
 }
 
 .order-product-info span {
     display: block;
-
     color: var(--muted);
-
     font-size: 11px;
-
     line-height: 1.4;
 }
 
 .product-price {
     display: block;
-
     margin-top: 7px;
-
     color: var(--gold);
-
     font-size: 14px;
     font-weight: 700;
 }
@@ -1031,42 +677,27 @@ button {
 
 .quantity {
     display: flex;
-
     align-items: center;
-
     gap: 7px;
-
     padding: 4px;
-
     border:
         1px solid var(--line);
-
     border-radius: 50px;
-
     flex-shrink: 0;
 }
 
 .quantity button {
     width: 31px;
     height: 31px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border: 0;
-
     border-radius: 50%;
-
     background: #f3f0e9;
-
     color: var(--dark);
-
     font-size: 17px;
-
     line-height: 1;
-
     transition:
         background .2s ease,
         color .2s ease,
@@ -1075,27 +706,18 @@ button {
 
 .quantity button:hover {
     background: var(--gold);
-
     color: white;
-
     transform: scale(1.05);
 }
 
 .quantity input {
     width: 34px;
-
     padding: 0;
-
     border: 0;
-
     outline: 0;
-
     background: transparent;
-
     text-align: center;
-
     color: var(--dark);
-
     font-size: 13px;
     font-weight: 700;
 }
@@ -1107,30 +729,23 @@ button {
 
 .customer-form {
     margin-top: 35px;
-
     padding-top: 30px;
-
     border-top:
         1px solid var(--line);
 }
 
 .form-grid {
     width: 100%;
-
     display: grid;
-
     grid-template-columns:
         repeat(2,minmax(0,1fr));
-
     gap: 17px;
 }
 
 .form-group {
     min-width: 0;
-
     display: flex;
     flex-direction: column;
-
     gap: 7px;
 }
 
@@ -1140,12 +755,9 @@ button {
 
 .form-group label {
     color: var(--muted);
-
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 1.5px;
-
     text-transform: uppercase;
 }
 
@@ -1155,23 +767,15 @@ button {
     width: 100%;
     max-width: 100%;
     min-width: 0;
-
     padding:
         13px 15px;
-
     border:
         1px solid var(--line);
-
     border-radius: 12px;
-
     outline: none;
-
     background: #fffdf9;
-
     color: var(--dark);
-
     font-size: 13px;
-
     transition:
         border-color .25s ease,
         box-shadow .25s ease;
@@ -1181,7 +785,6 @@ button {
 .form-group textarea:focus,
 .form-group select:focus {
     border-color: var(--gold);
-
     box-shadow:
         0 0 0 3px
         rgba(183,138,69,.09);
@@ -1189,7 +792,6 @@ button {
 
 .form-group textarea {
     min-height: 105px;
-
     resize: vertical;
 }
 
@@ -1200,21 +802,13 @@ button {
 
 .summary-card {
     position: sticky;
-
     top: 95px;
-
     min-width: 0;
-
     overflow: hidden;
-
     padding: 32px;
-
     border-radius: 25px;
-
     background: var(--dark);
-
     color: white;
-
     box-shadow:
         0 25px 65px
         rgba(0,0,0,.18);
@@ -1222,169 +816,123 @@ button {
 
 .summary-card::before {
     content: "";
-
     position: absolute;
-
     width: 280px;
     height: 280px;
-
     top: -140px;
     right: -100px;
-
     border:
         1px solid
         rgba(183,138,69,.18);
-
     border-radius: 50%;
 }
 
 .summary-card::after {
     content: "";
-
     position: absolute;
-
     width: 200px;
     height: 200px;
-
     bottom: -100px;
     left: -80px;
-
     border-radius: 50%;
-
     background:
         rgba(183,138,69,.07);
 }
 
 .summary-content {
     position: relative;
-
     z-index: 2;
-
     min-width: 0;
 }
 
 .summary-label {
     color: #d7ad6c;
-
     font-size: 9px;
     font-weight: 700;
-
     letter-spacing: 3px;
-
     text-transform: uppercase;
 }
 
 .summary-card h2 {
     margin:
         8px 0 28px;
-
     font-family:
         "Playfair Display",
         serif;
-
     font-size:
         clamp(29px,4vw,36px);
 }
 
 .summary-items {
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     gap: 13px;
-
     max-height: 300px;
-
     overflow-y: auto;
     overflow-x: hidden;
-
     padding-right: 4px;
 }
 
 .summary-empty {
     padding: 15px 0;
-
     color: #918c83;
-
     font-size: 13px;
-
     line-height: 1.7;
 }
 
 .summary-row {
     width: 100%;
-
     display: grid;
-
     grid-template-columns:
         minmax(0,1fr)
         auto;
-
     gap: 15px;
-
     color: #d9d5ce;
-
     font-size: 12px;
-
     line-height: 1.5;
 }
 
 .summary-row span {
     min-width: 0;
-
     overflow-wrap: anywhere;
 }
 
 .summary-row span:last-child {
     color: white;
-
     font-weight: 700;
-
     white-space: nowrap;
 }
 
 .summary-divider {
     width: 100%;
-
     height: 1px;
-
     margin: 25px 0;
-
     background:
         rgba(255,255,255,.12);
 }
 
 .total-row {
     display: flex;
-
     align-items: flex-end;
-
     justify-content: space-between;
-
     gap: 15px;
 }
 
 .total-row span:first-child {
     color: #aaa49a;
-
     font-size: 11px;
-
     letter-spacing: 2px;
-
     text-transform: uppercase;
 }
 
 .total-price {
     color: white;
-
     font-family:
         "Playfair Display",
         serif;
-
     font-size:
         clamp(30px,5vw,38px);
-
     white-space: nowrap;
 }
 
@@ -1396,18 +944,12 @@ button {
 .place-order,
 .whatsapp-order {
     width: 100%;
-
     min-height: 51px;
-
     padding:
         14px 20px;
-
     border-radius: 50px;
-
     font-size: 13px;
-
     font-weight: 700;
-
     transition:
         transform .3s ease,
         box-shadow .3s ease,
@@ -1416,19 +958,14 @@ button {
 
 .place-order {
     margin-top: 28px;
-
     border: 0;
-
     background: var(--gold);
-
     color: white;
 }
 
 .place-order:hover {
     background: #d09d51;
-
     transform: translateY(-2px);
-
     box-shadow:
         0 15px 30px
         rgba(183,138,69,.25);
@@ -1436,20 +973,15 @@ button {
 
 .whatsapp-order {
     margin-top: 12px;
-
     border:
         1px solid var(--green);
-
     background: var(--green);
-
     color: white;
 }
 
 .whatsapp-order:hover {
     background: #157347;
-
     transform: translateY(-2px);
-
     box-shadow:
         0 12px 25px
         rgba(25,135,84,.22);
@@ -1457,13 +989,9 @@ button {
 
 .order-note {
     margin-top: 17px;
-
     color: #777269;
-
     font-size: 9px;
-
     line-height: 1.6;
-
     text-align: center;
 }
 
@@ -1474,24 +1002,17 @@ button {
 
 .footer {
     width: 100%;
-
     padding:
         25px 0;
-
     background: #11100e;
-
     color: #8e8a82;
 }
 
 .footer-inner {
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 20px;
-
     font-size: 10px;
 }
 
@@ -1506,39 +1027,27 @@ button {
 
 .success-message {
     position: fixed;
-
     right: 25px;
     bottom: 25px;
-
     z-index: 5000;
-
     width:
         min(
             380px,
             calc(100% - 40px)
         );
-
     padding:
         20px 22px;
-
     background: white;
-
     border-left:
         4px solid var(--green);
-
     border-radius: 18px;
-
     box-shadow:
         0 20px 60px
         rgba(0,0,0,.18);
-
     transform:
         translateY(130px);
-
     opacity: 0;
-
     pointer-events: none;
-
     transition:
         transform .4s ease,
         opacity .4s ease;
@@ -1547,23 +1056,18 @@ button {
 .success-message.show {
     transform:
         translateY(0);
-
     opacity: 1;
 }
 
 .success-message strong {
     display: block;
-
     margin-bottom: 5px;
-
     font-size: 14px;
 }
 
 .success-message span {
     color: var(--muted);
-
     font-size: 11px;
-
     line-height: 1.6;
 }
 
@@ -1577,85 +1081,6 @@ button {
     .container {
         width: calc(100% - 40px);
     }
-
-    /* Mobile navigation */
-
-    .menu {
-        display: flex;
-    }
-
-    .nav-links {
-        position: fixed;
-
-        top: 76px;
-        left: 20px;
-        right: 20px;
-
-        width: auto;
-
-        padding: 20px;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0;
-
-        background:
-            rgba(255,253,248,.98);
-
-        backdrop-filter: blur(20px);
-
-        border:
-            1px solid var(--line);
-
-        border-radius: 20px;
-
-        box-shadow:
-            0 25px 60px
-            rgba(0,0,0,.12);
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        transform:
-            translateY(-15px);
-
-        transition:
-            opacity .3s ease,
-            visibility .3s ease,
-            transform .3s ease;
-    }
-
-    .nav-links.open {
-        opacity: 1;
-
-        visibility: visible;
-
-        transform:
-            translateY(0);
-    }
-
-    .nav-links > a {
-        width: 100%;
-
-        padding: 14px 5px;
-
-        border-bottom:
-            1px solid var(--line);
-    }
-
-    .nav-links > a:last-child {
-        border-bottom: 0;
-    }
-
-    .nav-links .nav-order {
-        width: 100%;
-
-        margin-top: 14px;
-    }
-
 
     /* Hero */
 
@@ -1682,15 +1107,12 @@ button {
 
     .order-layout {
         width: calc(100% - 40px);
-
         grid-template-columns: 1fr;
-
         gap: 25px;
     }
 
     .summary-card {
         position: relative;
-
         top: auto;
     }
 
@@ -1714,18 +1136,12 @@ button {
 
     .order-hero {
         position: relative;
-
         width: 100%;
-
         min-height: 0 !important;
         height: auto !important;
-
         padding: 0 !important;
-
         display: block;
-
         overflow: hidden;
-
         background: #120f0b;
     }
 
@@ -1736,17 +1152,11 @@ button {
 
     .order-scene {
         position: relative;
-
         inset: auto;
-
         width: 100%;
-
         height: auto;
-
         min-height: 0;
-
         overflow: hidden;
-
         transform: none !important;
     }
 
@@ -1757,34 +1167,22 @@ button {
 
     .scene-image {
         position: relative;
-
         inset: auto;
-
         width: 100%;
-
         height: auto;
-
         overflow: hidden;
-
         transform: none !important;
-
         animation: none !important;
     }
 
     .scene-image img {
         display: block;
-
         width: 100%;
         height: auto;
-
         max-width: none;
-
         object-fit: contain !important;
-
         object-position: center center !important;
-
         transform: none !important;
-
         filter:
             saturate(1.05)
             contrast(1.02)
@@ -1798,13 +1196,9 @@ button {
 
     .order-scene::after {
         content: "";
-
         position: absolute;
-
         inset: 0;
-
         z-index: 2;
-
         background:
             linear-gradient(
                 to bottom,
@@ -1812,7 +1206,6 @@ button {
                 rgba(5,4,2,.04) 45%,
                 rgba(5,4,2,.45) 100%
             );
-
         pointer-events: none;
     }
 
@@ -1835,28 +1228,18 @@ button {
 
     .order-hero-content {
         position: absolute;
-
         z-index: 10;
-
         top: 50%;
         left: 50%;
-
         width:
             calc(100% - 30px);
-
         max-width: 390px;
-
         margin: 0;
-
         padding: 0;
-
         transform:
             translate(-50%, -50%);
-
         text-align: center;
-
         color: white;
-
         animation: none;
     }
 
@@ -1867,36 +1250,23 @@ button {
 
     .order-label {
         display: inline-flex;
-
         align-items: center;
         justify-content: center;
-
         max-width: 100%;
-
         padding:
             7px 11px;
-
         margin-bottom: 14px;
-
         font-size: 7px;
-
         letter-spacing: 1.7px;
-
         line-height: 1.3;
-
         white-space: nowrap;
-
         border-radius: 50px;
-
         background:
             rgba(20,14,8,.65);
-
         border:
             1px solid
             rgba(221,183,111,.55);
-
         backdrop-filter: blur(10px);
-
         box-shadow:
             0 6px 20px
             rgba(0,0,0,.2);
@@ -1909,20 +1279,15 @@ button {
 
     .order-hero-content h1 {
         margin: 0;
-
         font-size:
             clamp(
                 46px,
                 15vw,
                 68px
             );
-
         line-height: .88;
-
         letter-spacing: -2px;
-
         font-weight: 500;
-
         text-shadow:
             0 5px 20px
             rgba(0,0,0,.65);
@@ -1939,25 +1304,17 @@ button {
 
     .order-hero-content p {
         width: 100%;
-
         max-width: 310px;
-
         margin:
             17px auto 0;
-
         padding: 0 4px;
-
         font-size: 10px;
-
         line-height: 1.65;
-
         color:
             rgba(255,255,255,.92);
-
         text-shadow:
             0 2px 8px
             rgba(0,0,0,.75);
-
         overflow-wrap: break-word;
     }
 
@@ -1975,9 +1332,7 @@ button {
     .order-layout {
         width:
             calc(100% - 20px);
-
         grid-template-columns: 1fr;
-
         gap: 16px;
     }
 
@@ -1985,7 +1340,6 @@ button {
     .summary-card {
         padding:
             18px 13px;
-
         border-radius: 17px;
     }
 
@@ -2000,62 +1354,46 @@ button {
 
     .order-product {
         display: grid;
-
         grid-template-columns:
             55px
             minmax(0,1fr);
-
         grid-template-areas:
             "image info"
             "image quantity";
-
         align-items: center;
-
         column-gap: 10px;
-
         row-gap: 6px;
-
         padding: 9px;
-
         border-radius: 14px;
     }
 
     .order-product-image {
         grid-area: image;
-
         width: 55px;
         height: 55px;
     }
 
     .order-product-info {
         grid-area: info;
-
         min-width: 0;
     }
 
     .order-product-info h3 {
         font-size: 16px;
-
         white-space: nowrap;
-
         overflow: hidden;
-
         text-overflow: ellipsis;
     }
 
     .order-product-info span {
         font-size: 9px;
-
         white-space: nowrap;
-
         overflow: hidden;
-
         text-overflow: ellipsis;
     }
 
     .product-price {
         margin-top: 3px;
-
         font-size: 12px;
     }
 
@@ -2066,28 +1404,21 @@ button {
 
     .quantity {
         grid-area: quantity;
-
         justify-self: start;
-
         width: max-content;
-
         margin: 0;
-
         gap: 5px;
-
         padding: 3px;
     }
 
     .quantity button {
         width: 27px;
         height: 27px;
-
         font-size: 15px;
     }
 
     .quantity input {
         width: 28px;
-
         font-size: 12px;
     }
 
@@ -2098,13 +1429,11 @@ button {
 
     .customer-form {
         margin-top: 27px;
-
         padding-top: 24px;
     }
 
     .form-grid {
         grid-template-columns: 1fr;
-
         gap: 14px;
     }
 
@@ -2119,7 +1448,6 @@ button {
 
     .summary-card h2 {
         margin-bottom: 21px;
-
         font-size: 28px;
     }
 
@@ -2127,9 +1455,7 @@ button {
         grid-template-columns:
             minmax(0,1fr)
             auto;
-
         gap: 8px;
-
         font-size: 11px;
     }
 
@@ -2149,7 +1475,6 @@ button {
     .place-order,
     .whatsapp-order {
         min-height: 50px;
-
         font-size: 12px;
     }
 
@@ -2160,13 +1485,9 @@ button {
 
     .footer-inner {
         flex-direction: column;
-
         justify-content: center;
-
         text-align: center;
-
         gap: 7px;
-
         line-height: 1.6;
     }
 
@@ -2178,9 +1499,7 @@ button {
     .success-message {
         left: 10px;
         right: 10px;
-
         bottom: 10px;
-
         width: auto;
     }
 }
@@ -2198,51 +1517,6 @@ button {
     }
 
 
-    /* Header */
-
-    .navbar {
-        padding:
-            10px 0;
-    }
-
-    .logo {
-        gap: 8px;
-    }
-
-    .logo-mark {
-        width: 37px;
-        height: 37px;
-
-        font-size: 14px;
-    }
-
-    .logo-text strong {
-        font-size: 17px;
-    }
-
-    .logo-text span {
-        font-size: 7px;
-
-        letter-spacing: 1px;
-    }
-
-    .menu {
-        width: 39px;
-        height: 39px;
-    }
-
-    .nav-links {
-        top: 65px;
-
-        left: 10px;
-        right: 10px;
-
-        padding: 15px;
-
-        border-radius: 16px;
-    }
-
-
     /* -----------------------------------------------
        HERO TEXT — SMALL PHONE
     ----------------------------------------------- */
@@ -2250,18 +1524,14 @@ button {
     .order-hero-content {
         width:
             calc(100% - 24px);
-
         max-width: 360px;
     }
 
     .order-label {
         padding:
             6px 9px;
-
         font-size: 6.5px;
-
         letter-spacing: 1.5px;
-
         margin-bottom: 11px;
     }
 
@@ -2272,19 +1542,14 @@ button {
                 15vw,
                 58px
             );
-
         line-height: .9;
-
         letter-spacing: -1.5px;
     }
 
     .order-hero-content p {
         max-width: 285px;
-
         margin-top: 14px;
-
         font-size: 9px;
-
         line-height: 1.6;
     }
 
@@ -2300,7 +1565,6 @@ button {
     .order-layout {
         width:
             calc(100% - 16px);
-
         gap: 14px;
     }
 
@@ -2308,7 +1572,6 @@ button {
     .summary-card {
         padding:
             16px 11px;
-
         border-radius: 15px;
     }
 
@@ -2319,9 +1582,7 @@ button {
         grid-template-columns:
             50px
             minmax(0,1fr);
-
         column-gap: 9px;
-
         padding: 8px;
     }
 
@@ -2350,14 +1611,6 @@ button {
 
 @media (max-width: 360px) {
 
-    .logo-text span {
-        display: none;
-    }
-
-    .logo-text strong {
-        font-size: 16px;
-    }
-
     .order-hero-content {
         width:
             calc(100% - 18px);
@@ -2365,19 +1618,16 @@ button {
 
     .order-hero-content h1 {
         font-size: 43px;
-
         letter-spacing: -1px;
     }
 
     .order-hero-content p {
         max-width: 260px;
-
         font-size: 8.5px;
     }
 
     .order-label {
         font-size: 6px;
-
         letter-spacing: 1.2px;
     }
 
@@ -2415,7 +1665,6 @@ button {
 
     .order-hero-content p {
         margin-top: 10px;
-
         font-size: 9px;
     }
 }
@@ -2431,104 +1680,12 @@ button {
     *::before,
     *::after {
         scroll-behavior: auto !important;
-
         animation-duration: .01ms !important;
-
         animation-iteration-count: 1 !important;
-
         transition-duration: .01ms !important;
     }
 }
-/* =========================================================
-   LOGO TEXT — BOOKMAN OLD STYLE
-========================================================= */
 
-.logo-text strong.milisys-name {
-    display: block;
-
-    font-family:
-        "Bookman Old Style",
-        "Bookman",
-        Georgia,
-        serif;
-
-    font-size: 20px;
-
-    line-height: 1;
-
-    font-weight: 700;
-
-    color: #198754;
-
-    letter-spacing: .2px;
-}
-
-
-.logo-text span.company-subtitle {
-    display: block;
-
-    margin-top: 5px;
-
-    font-family:
-        "Bookman Old Style",
-        "Bookman",
-        Georgia,
-        serif;
-
-    font-size: 9px;
-
-    line-height: 1.2;
-
-    font-weight: 700;
-
-    color: #000000;
-
-    letter-spacing: .3px;
-}
-
-
-.logo-text span.geo-ventures {
-    display: inline;
-
-    margin: 0;
-
-    font-family:
-        "Bookman Old Style",
-        "Bookman",
-        Georgia,
-        serif;
-
-    font-size: inherit;
-
-    font-weight: 700;
-
-    color: #f28c28;
-
-    letter-spacing: .3px;
-}
-@media (max-width: 480px) {
-
-    .logo-text strong.milisys-name {
-        font-size: 17px;
-    }
-
-    .logo-text span.company-subtitle {
-        font-size: 7px;
-        letter-spacing: .15px;
-    }
-
-}
-@media (max-width: 360px) {
-
-    .logo-text strong.milisys-name {
-        font-size: 16px;
-    }
-
-    .logo-text span.company-subtitle {
-        font-size: 6.5px;
-    }
-
-}
 </style>
 
 
@@ -2538,87 +1695,7 @@ button {
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
 
-<header class="navbar" id="navbar">
-
-    <div class="container nav-inner">
-
-
-        <a href="index.html" class="logo">
-
-            <!-- LOGO IMAGE -->
-            <div class="logo-mark">
-                <img
-                    src="img/milisys logo breakdown-09.png"
-                    alt="Milisys Logo"
-                >
-            </div>
-
-            <!-- LOGO TEXT -->
-            <div class="logo-text">
-
-                <strong class="milisys-name">
-                    Milisys
-                </strong>
-
-                <span class="company-subtitle">
-                    By Mathew's Mills |
-                    <span class="geo-ventures">
-                        JO-GEO VENTURES
-                    </span>
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <nav class="nav-links" id="navLinks">
-
-            <a href="index.html">
-                Home
-            </a>
-
-           
-             <a href="order now.html" class="active">
-                Order Now
-            </a>
-
-            <a href="our story.html">
-                Our Story
-            </a>
-
-            
-
-            <a href="gallery.html">
-                Gallery
-            </a>
-
-            <a href="order.html"
-               class="nav-order active">
-                Contact Us
-            </a>
-
-        </nav>
-
-
-        <button
-            type="button"
-            class="menu"
-            id="menu"
-            aria-label="Open navigation">
-
-            ☰
-
-        </button>
-
-
-    </div>
-
-</header>
 
 
 
@@ -3567,7 +2644,7 @@ button {
             © 2026
 
             <strong>
-                Milisys by Mathew's Mills
+                JO-GEO WEB STUDIO
             </strong>
 
         </div>
