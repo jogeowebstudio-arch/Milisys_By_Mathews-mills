@@ -10940,11 +10940,8 @@ button{
 
             <!-- WHATSAPP BUTTON -->
             <a
-                href="#"
-                class="whatsapp-btn"
-                id="mainWhatsapp"
-                target="_blank"
-                rel="noopener noreferrer">
+                href="order now.html"
+                class="whatsapp-btn">
 
                 <span class="whatsapp-icon">
 
@@ -11246,51 +11243,15 @@ filters.forEach(filter => {
 
 
 /* =========================================================
-   WHATSAPP PRODUCT ORDER
+   PRODUCT ORDER REDIRECT
 ========================================================= */
-
-function openWhatsApp(product){
-
-    const message =
-`Hello Mathew's Mills,
-
-I would like to order:
-${product}
-
-Please share the price and availability.
-
-Thank you.`;
-
-
-    const url =
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        encodeURIComponent(message);
-
-
-    window.open(
-        url,
-        "_blank",
-        "noopener,noreferrer"
-    );
-
-}
-
 
 document
     .querySelectorAll(".order-btn:not(.disabled)")
     .forEach(button => {
-
         button.addEventListener("click", () => {
-
-            const product =
-                button.dataset.product;
-
-            openWhatsApp(product);
-
+            window.location.href = "order now.html";
         });
-
     });
 
 
@@ -11786,257 +11747,7 @@ milisysStart();
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script>
 
-document.addEventListener("DOMContentLoaded", () => {
-
-
-    /* =================================================
-       MOBILE MENU
-    ================================================= */
-
-    const menuButton =
-        document.getElementById("mobileMenu");
-
-    const navigation =
-        document.querySelector(".hero-menu");
-
-
-    if (menuButton && navigation) {
-
-        menuButton.addEventListener(
-            "click",
-            () => {
-
-                navigation.classList.toggle(
-                    "mobile-active"
-                );
-
-            }
-        );
-
-    }
-
-
-    /* =================================================
-       SUBTLE MOUSE PARALLAX
-    ================================================= */
-
-    const visual =
-        document.querySelector(".hero-visual");
-
-    const mainImage =
-        document.querySelector(".hero-main-image");
-
-
-    if (
-        visual &&
-        mainImage &&
-        window.innerWidth > 900
-    ) {
-
-        visual.addEventListener(
-            "mousemove",
-            (e) => {
-
-                const rect =
-                    visual.getBoundingClientRect();
-
-                const x =
-                    (e.clientX - rect.left)
-                    / rect.width
-                    - .5;
-
-                const y =
-                    (e.clientY - rect.top)
-                    / rect.height
-                    - .5;
-
-
-                mainImage.style.transform =
-                    `
-                    rotate(-2deg)
-                    scale(1.06)
-                    translate(
-                        ${x * 10}px,
-                        ${y * 10}px
-                    )
-                    `;
-
-            }
-        );
-
-
-        visual.addEventListener(
-            "mouseleave",
-            () => {
-
-                mainImage.style.transform =
-                    `
-                    rotate(-2deg)
-                    scale(1.04)
-                    `;
-
-            }
-        );
-
-    }
-
-
-    /* =================================================
-       SCROLL REVEAL
-    ================================================= */
-
-    const revealItems =
-        document.querySelectorAll(
-            ".hero-copy, .hero-visual, .product-card, .benefit"
-        );
-
-
-    const observer =
-        new IntersectionObserver(
-            entries => {
-
-                entries.forEach(
-                    entry => {
-
-                        if (
-                            entry.isIntersecting
-                        ) {
-
-                            entry.target.style.opacity =
-                                "1";
-
-                            entry.target.style.transform =
-                                "translateY(0)";
-
-                            observer.unobserve(
-                                entry.target
-                            );
-
-                        }
-
-                    }
-                );
-
-            },
-            {
-                threshold: .12
-            }
-        );
-
-
-    revealItems.forEach(
-        item => {
-
-            item.style.opacity = "0";
-
-            item.style.transform =
-                "translateY(25px)";
-
-            item.style.transition =
-                "opacity .8s ease, transform .8s ease";
-
-            observer.observe(item);
-
-        }
-    );
-
-});
-/* =====================================================
-   MATHEW'S MILLS — WHATSAPP ORDER
-===================================================== */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const whatsappButton =
-        document.getElementById("mainWhatsapp");
-
-    if (!whatsappButton) {
-        return;
-    }
-
-
-    /*
-    =====================================================
-    WHATSAPP NUMBER
-
-    Replace this with your actual number.
-
-    India example:
-    919876543210
-
-    Do NOT use:
-    +91 98765 43210
-    =====================================================
-    */
-
-    const phoneNumber = "919207483873";
-
-
-    /*
-    =====================================================
-    DEFAULT MESSAGE
-    =====================================================
-    */
-
-    const message =
-        "Hello Mathew's Mills 👋\n\n" +
-        "I would like to order from Mathew's Mills.\n\n" +
-        "Please share the available products, " +
-        "pricing and order details.\n\n" +
-        "Thank you.";
-
-
-    /*
-    =====================================================
-    CREATE WHATSAPP URL
-    =====================================================
-    */
-
-    const whatsappURL =
-        "https://wa.me/" +
-        phoneNumber +
-        "?text=" +
-        encodeURIComponent(message);
-
-
-    /*
-    =====================================================
-    SET BUTTON LINK
-    =====================================================
-    */
-
-    whatsappButton.setAttribute(
-        "href",
-        whatsappURL
-    );
-
-
-    /*
-    =====================================================
-    BUTTON CLICK
-    =====================================================
-    */
-
-    whatsappButton.addEventListener(
-        "click",
-        function () {
-
-            /*
-            Allow the normal WhatsApp link
-            to open in a new tab.
-            */
-
-            console.log(
-                "Opening Mathew's Mills WhatsApp..."
-            );
-
-        }
-    );
-
-});
-</script>
 
 </body>
 </html>
