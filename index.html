@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet">
 
 <style>
@@ -209,21 +209,56 @@ button{
     color:var(--gold);
 }
 
+.logo-text{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:0;
+    line-height:1;
+    white-space:nowrap;
+}
+
 .logo-text strong{
-    display:block;
-    font-family:"Playfair Display",serif;
+    display:inline;
+    font-family:"Libre Baskerville","Bookman Old Style",Bookman,Georgia,"Times New Roman",serif;
     font-size:20px;
     line-height:1;
+    font-weight:700;
+    color:#3f7548;
 }
 
 .logo-text span{
-    display:block;
-    margin-top:4px;
+    display:inline;
+    margin-top:0;
+    margin-left:8px;
+    font-family:"Libre Baskerville","Bookman Old Style",Bookman,Georgia,"Times New Roman",serif;
+    font-size:12px;
+    line-height:1;
+    letter-spacing:.2px;
+    text-transform:none;
+    color:#e28b2d;
+    font-weight:700;
+}
 
-    font-size:9px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:var(--muted);
+.logo-text .brand-separator{
+    display:inline;
+    margin:0 7px;
+    font-family:"Libre Baskerville","Bookman Old Style",Bookman,Georgia,"Times New Roman",serif;
+    font-size:14px;
+    line-height:1;
+    color:#111111;
+    font-weight:700;
+}
+
+.logo-text .brand-venture{
+    display:inline;
+    font-family:"Libre Baskerville","Bookman Old Style",Bookman,Georgia,"Times New Roman",serif;
+    font-size:11px;
+    line-height:1;
+    letter-spacing:.2px;
+    text-transform:none;
+    color:#111111;
+    font-weight:700;
 }
 
 .nav-links{
@@ -257,23 +292,82 @@ button{
 }
 
 .nav-order{
-    background:var(--dark);
-    color:var(--gold-light);
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:42px;
+    padding:0 18px;
 
-    padding:12px 20px;
-    border-radius:2px;
-    letter-spacing:.5px;
+    border-radius:999px;
 
-    font-size:12px;
+    font-size:11px;
     font-weight:700;
+    letter-spacing:.7px;
+    text-transform:uppercase;
 
-    transition:.3s;
+    color:#ffffff !important;
+    background:linear-gradient(
+        180deg,
+        #4b9df8 0%,
+        #2676d9 48%,
+        #1c5fb2 100%
+    );
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,.55),
+        inset 0 -3px 4px rgba(0,0,0,.12),
+        0 4px 0 #164b8d,
+        0 9px 20px rgba(30,91,170,.22);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        filter .35s ease;
+}
+
+.nav-order::after{
+    content:"›";
+    width:27px;
+    height:27px;
+    margin-left:9px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+    font-size:20px;
+    line-height:1;
+    font-weight:300;
+    color:#ffffff;
+
+    background:rgba(255,255,255,.20);
+
+    box-shadow:
+        inset 1px 1px 2px rgba(255,255,255,.35),
+        inset -1px -1px 2px rgba(0,0,0,.12);
 }
 
 .nav-order:hover{
-    background:var(--gold-deep);
-    color:#fff;
-    transform:translateY(-2px);
+    color:#ffffff !important;
+    transform:translateY(-4px);
+    filter:brightness(1.08);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255,255,255,.7),
+        inset 0 -3px 4px rgba(0,0,0,.10),
+        0 6px 0 #164b8d,
+        0 15px 30px rgba(30,91,170,.30);
+}
+
+.nav-order:active{
+    transform:translateY(2px);
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,.2),
+        0 2px 0 #164b8d,
+        0 5px 10px rgba(0,0,0,.15);
 }
 
 .menu{
@@ -3199,6 +3293,30 @@ button{
     .nav-order{
         text-align:center;
         margin-top:12px;
+        width:100%;
+        min-height:46px;
+    }
+
+    .logo-text{
+        max-width:calc(100vw - 125px);
+    }
+
+    .logo-text strong{
+        font-size:17px;
+    }
+
+    .logo-text span{
+        font-size:10px;
+        margin-left:6px;
+    }
+
+    .logo-text .brand-separator{
+        margin:0 5px;
+        font-size:12px;
+    }
+
+    .logo-text .brand-venture{
+        font-size:9px;
     }
 
     .menu{
@@ -9205,7 +9323,7 @@ button{
 
             <div class="hero-actions">
 
-                <a href="order.html"
+                <a href="order now.html"
                    class="btn btn-primary">
 
                     <span>Explore Products</span>
@@ -9213,7 +9331,7 @@ button{
                 </a>
 
 
-                <a href="our-story.html"
+                <a href="our story.html"
                    class="btn btn-secondary">
 
                     <span>Our Story</span>
